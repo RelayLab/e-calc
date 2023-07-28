@@ -10,9 +10,10 @@ namespace e_calc
     /// <summary>
     /// Отдельный класс, который управляет всеми данными в приложении, чтобы данные были отдельно от окон WinForms
     /// </summary>
-    internal class Model
+    public class Model
     {
         public readonly List<String> TaskList;
+        private readonly List<IConversion> Conversions;
 
         /// <summary>
         /// Этот конструктор создаёт исходные данные для вывода в окно приложения
@@ -20,8 +21,8 @@ namespace e_calc
         public Model()
         {
             IConversion c1 = new Conversion1();
-            List<IConversion> Conversions = new List<IConversion> { c1 };
-            this.TaskList = Conversions.Select(x => x.Name).ToList(); 
+            Conversions = new List<IConversion> { c1 };
+            this.TaskList = Conversions.Select(x => x.Name).ToList();
 
             ///Список задач, которые может решать программа
             //this.TaskList = new List<string> {
@@ -32,6 +33,22 @@ namespace e_calc
             //    "активная(кВт) - полная(кВА) мощность",
             //    "активная(кВт) - реактивная(кВА) мощность",
             //    "косинус(cos φ) - тангенс(tg φ) коэффициента мощности" };
+        }
+
+
+        /// <summary>
+        /// Эта функция возвращает количество физических величин, которые нужны для выбранного преобразования
+        /// </summary>
+        /// <param name="SelectedItem"></param>
+        /// <returns></returns>
+        public int GetQuantitiesCount(string SelectedItem)
+        {
+            foreach(Conversion1 c in this.Conversions)
+            {
+                if (c.Name == SelectedItem)
+                    return c.OperandsCount;
+            }
+            return 0;
         }
     }
 

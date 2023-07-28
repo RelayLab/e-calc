@@ -31,7 +31,7 @@ namespace e_calc
         /// Эта функция преобразует enum к их строковому представлению с помощью словаря Dictionary, определённого в этом же классе Helper
         /// </summary>
         /// <param name="quantities">Список из нескольких enum</param>
-        /// <returns>Те же enum, но в виде строк</returns>
+        /// <returns>Те же enum, но в виде строк</returns> 
         public static List<string> QuantitiesAsString(List<PhysicalQuantity> quantities)
         {
 

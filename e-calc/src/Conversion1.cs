@@ -13,14 +13,18 @@ namespace e_calc
     class Conversion1 : IConversion
     {
         public string Name { get; }
+        
         public List<PhysicalQuantity> Quantities { get; }
         public List<string> QuantitiesAsString { get; }
+
+        public int OperandsCount { get; }
 
         /// <summary>
         /// 
         /// </summary>
         public Conversion1()
         {
+            OperandsCount = 2;
             Name = "любые величины";
             Quantities = new List<PhysicalQuantity>
             {

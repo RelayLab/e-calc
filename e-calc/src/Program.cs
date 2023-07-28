@@ -23,7 +23,7 @@ namespace e_calc
 
             //запускаем графический интерфейс, указывая в конструкторе все исходные данные из модели
             MainWindow mw = new MainWindow(
-                MainModel.TaskList);
+                MainModel);
             
             Application.Run(mw);
         }
