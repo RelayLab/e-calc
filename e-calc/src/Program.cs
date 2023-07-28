@@ -18,7 +18,6 @@ namespace e_calc
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainWindow());
 
-
             //создаём модель данных, которая должна быть отдельной от логики WinForms
             Model MainModel = new Model();
 

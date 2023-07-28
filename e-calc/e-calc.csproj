@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Conversion1.cs" />
+    <Compile Include="src\Helper.cs" />
+    <Compile Include="src\IConversion.cs" />
     <Compile Include="src\MainWindow\ResizeCombobox.cs">
       <SubType>Form</SubType>
     </Compile>
