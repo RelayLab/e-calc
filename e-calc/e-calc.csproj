@@ -59,9 +59,7 @@
     <Compile Include="src\IPhysicalQuantity + Quantities\IPhysicalQuantity.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityCurrent.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityActivePower.cs" />
-    <Compile Include="src\MainWindow\ResizeCombobox.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="src\Helper\ResizeCombobox.cs" />
     <Compile Include="src\MainWindow\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -17,7 +17,7 @@ namespace e_calc
         /// <returns>список возможных физических величин</returns>
         public List<string> ConversionChanged(string SelectedItem)
         {
-            foreach (Conversion1 c in this.Conversions)
+            foreach (Conversion1 c in this.ConversionsReference)
             {
                 if (c.Name == SelectedItem)
                     return c.QuantitiesAsString;

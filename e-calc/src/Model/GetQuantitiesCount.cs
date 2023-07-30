@@ -17,7 +17,7 @@ namespace e_calc
         /// <returns>количество физических величин, которые нужны для выбранного преобразования</returns>
         public int GetQuantitiesCount(string SelectedItem)
         {
-            foreach (Conversion1 c in this.Conversions)
+            foreach (Conversion1 c in this.ConversionsReference)
             {
                 if (c.Name == SelectedItem)
                     return c.OperandsCount;

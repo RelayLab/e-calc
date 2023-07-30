@@ -38,6 +38,18 @@ namespace e_calc
                 OperandsPanel.Controls.Add(oc);
             }
 
+
+
+            ResultQuantityCombobox.Items.Clear();
+            string ActiveConversion = (string)this.ConversionCombobox.SelectedItem;
+            ResultQuantityCombobox.Items.AddRange(
+                this.MainModel.GetResultQuantities(ActiveConversion).ToArray());
+            ResultQuantityCombobox.SelectedIndex = 0;
+            Helper.ResizeCombobox(ResultQuantityCombobox);
+
+
+
+
             this.ResumeLayout();
         }
 

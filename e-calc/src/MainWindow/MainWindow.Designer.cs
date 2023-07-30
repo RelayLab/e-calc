@@ -34,9 +34,9 @@
             this.ConversionCombobox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.ResultQuantityCombobox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.ResultUnitCombobox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -58,9 +58,9 @@
             this.MainWindowTable.Controls.Add(this.ConversionCombobox, 0, 1);
             this.MainWindowTable.Controls.Add(this.label2, 0, 2);
             this.MainWindowTable.Controls.Add(this.label5, 0, 4);
-            this.MainWindowTable.Controls.Add(this.comboBox6, 0, 5);
+            this.MainWindowTable.Controls.Add(this.ResultQuantityCombobox, 0, 5);
             this.MainWindowTable.Controls.Add(this.label8, 0, 6);
-            this.MainWindowTable.Controls.Add(this.comboBox9, 1, 7);
+            this.MainWindowTable.Controls.Add(this.ResultUnitCombobox, 1, 7);
             this.MainWindowTable.Controls.Add(this.label7, 0, 8);
             this.MainWindowTable.Controls.Add(this.richTextBox1, 0, 9);
             this.MainWindowTable.Controls.Add(this.textBox2, 0, 7);
@@ -79,7 +79,7 @@
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTable.Size = new System.Drawing.Size(630, 376);
+            this.MainWindowTable.Size = new System.Drawing.Size(660, 378);
             this.MainWindowTable.TabIndex = 0;
             // 
             // label1
@@ -133,20 +133,21 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Найти:";
             // 
-            // comboBox6
+            // ResultQuantityCombobox
             // 
-            this.MainWindowTable.SetColumnSpan(this.comboBox6, 2);
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.MainWindowTable.SetColumnSpan(this.ResultQuantityCombobox, 2);
+            this.ResultQuantityCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ResultQuantityCombobox.FormattingEnabled = true;
+            this.ResultQuantityCombobox.Items.AddRange(new object[] {
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.comboBox6.Location = new System.Drawing.Point(5, 236);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(5);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(171, 29);
-            this.comboBox6.TabIndex = 1;
+            this.ResultQuantityCombobox.Location = new System.Drawing.Point(5, 236);
+            this.ResultQuantityCombobox.Margin = new System.Windows.Forms.Padding(5);
+            this.ResultQuantityCombobox.Name = "ResultQuantityCombobox";
+            this.ResultQuantityCombobox.Size = new System.Drawing.Size(171, 29);
+            this.ResultQuantityCombobox.TabIndex = 1;
+            this.ResultQuantityCombobox.SelectedIndexChanged += new System.EventHandler(this.ResultQuantityCombobox_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -161,19 +162,19 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Ответ:";
             // 
-            // comboBox9
+            // ResultUnitCombobox
             // 
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.ResultUnitCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ResultUnitCombobox.FormattingEnabled = true;
+            this.ResultUnitCombobox.Items.AddRange(new object[] {
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.comboBox9.Location = new System.Drawing.Point(188, 301);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(5);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(171, 29);
-            this.comboBox9.TabIndex = 1;
+            this.ResultUnitCombobox.Location = new System.Drawing.Point(188, 301);
+            this.ResultUnitCombobox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 7);
+            this.ResultUnitCombobox.Name = "ResultUnitCombobox";
+            this.ResultUnitCombobox.Size = new System.Drawing.Size(171, 29);
+            this.ResultUnitCombobox.TabIndex = 1;
             // 
             // label7
             // 
@@ -181,7 +182,7 @@
             this.label7.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label7, 2);
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(4, 335);
+            this.label7.Location = new System.Drawing.Point(4, 337);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 21);
@@ -192,7 +193,7 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MainWindowTable.SetColumnSpan(this.richTextBox1, 2);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 359);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 361);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(100, 14);
@@ -218,7 +219,7 @@
             this.OperandsPanel.Controls.Add(this.operandControl1);
             this.OperandsPanel.Location = new System.Drawing.Point(3, 87);
             this.OperandsPanel.Name = "OperandsPanel";
-            this.OperandsPanel.Size = new System.Drawing.Size(624, 120);
+            this.OperandsPanel.Size = new System.Drawing.Size(654, 120);
             this.OperandsPanel.TabIndex = 3;
             // 
             // operandControl2
@@ -230,7 +231,7 @@
             this.operandControl2.Location = new System.Drawing.Point(5, 5);
             this.operandControl2.Margin = new System.Windows.Forms.Padding(5);
             this.operandControl2.Name = "operandControl2";
-            this.operandControl2.Size = new System.Drawing.Size(302, 110);
+            this.operandControl2.Size = new System.Drawing.Size(317, 110);
             this.operandControl2.TabIndex = 1;
             // 
             // operandControl1
@@ -239,10 +240,10 @@
             this.operandControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.operandControl1.BackColor = System.Drawing.SystemColors.Window;
             this.operandControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.operandControl1.Location = new System.Drawing.Point(317, 5);
+            this.operandControl1.Location = new System.Drawing.Point(332, 5);
             this.operandControl1.Margin = new System.Windows.Forms.Padding(5);
             this.operandControl1.Name = "operandControl1";
-            this.operandControl1.Size = new System.Drawing.Size(302, 110);
+            this.operandControl1.Size = new System.Drawing.Size(317, 110);
             this.operandControl1.TabIndex = 0;
             // 
             // MainWindow
@@ -274,12 +275,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox ResultQuantityCombobox;
         private System.Windows.Forms.ComboBox ConversionCombobox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox ResultUnitCombobox;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.FlowLayoutPanel OperandsPanel;
         private src.OperandControl operandControl2;

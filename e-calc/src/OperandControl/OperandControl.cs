@@ -48,6 +48,8 @@ namespace e_calc.src
                 this.OperandQuantityCombobox.SelectedIndex = 0; 
             }
 
+            Helper.ResizeCombobox(this.OperandQuantityCombobox);
+
             this.ResumeLayout();
             //выпадающий список с единицами измерения заполняется в другом событии OperandQuantityCombobox_SelectedIndexChanged
         }

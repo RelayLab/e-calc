@@ -20,6 +20,8 @@ namespace e_calc.src
         /// <param name="e"></param>
         private void OperandQuantityCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.SuspendLayout();
+
             //из модели получить список единиц измерения для выбранной в комбобоксе физической величины
             List<string> Units =
                 this._MainWindow.UpdateUnits(
@@ -31,6 +33,10 @@ namespace e_calc.src
             OperandUnitCombobox.Items.AddRange(
                 Units.ToArray());
             OperandUnitCombobox.SelectedIndex = 0;
+
+            Helper.ResizeCombobox(OperandUnitCombobox);
+
+            this.ResumeLayout();
         }
     }
 }

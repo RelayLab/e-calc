@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace e_calc
 {
-    partial class MainWindow : Form
+    partial class Helper
     {
 
         /// <summary>
         /// Эта функция подгоняет ширину Combobox под его содержимое. Такой стандартной функции WinForms нет.
         /// </summary>
         /// <param name="cb"></param>
-        private void ResizeCombobox(ComboBox cb)
+        public static void ResizeCombobox(ComboBox cb)
         {
             int ItemSize = 0;
             int MaxItemSize = 0;
@@ -35,7 +35,7 @@ namespace e_calc
                     MaxItemSize;
             }
 
-            cb.Width = MaxItemSize;
+            cb.Width = MaxItemSize + 20;
         }
 
     }

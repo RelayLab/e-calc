@@ -34,11 +34,29 @@ namespace e_calc
             MainModel = model;
 
             //Загружаем список всех конверторов в первый комбобокс на экране
-            this.ConversionCombobox.DataSource = MainModel.TaskList;
+            this.ConversionCombobox.Items.AddRange(
+                MainModel.ConversionsAsString.ToArray());
             this.ConversionCombobox.SelectedIndex = 0;
-            ResizeCombobox(ConversionCombobox);
+            Helper.ResizeCombobox(ConversionCombobox);
 
             //дальнейшая инициализация происходит через функцию обновления этого комбобокса ConversionCombobox_SelectedIndexChanged
+        }
+
+        private void ResultQuantityCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.SuspendLayout();
+
+            ResultUnitCombobox.Items.Clear();
+
+            List<string> Units = this.MainModel.UpdateUnits(
+                    (string)this.ResultQuantityCombobox.SelectedItem);
+
+            ResultUnitCombobox.Items.AddRange(Units.ToArray());
+            ResultUnitCombobox.SelectedIndex = 0;
+
+            Helper.ResizeCombobox(ResultUnitCombobox);
+
+            this.ResumeLayout();
         }
     }
 }

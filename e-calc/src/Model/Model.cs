@@ -12,8 +12,8 @@ namespace e_calc
     /// </summary>
     public partial class Model
     {
-        public readonly List<String> TaskList;
-        private readonly List<IConversion> Conversions;
+        public readonly List<String> ConversionsAsString;
+        private readonly List<IConversion> ConversionsReference;
 
         /// <summary>
         /// Этот конструктор создаёт исходные данные для вывода в окно приложения
@@ -21,8 +21,8 @@ namespace e_calc
         public Model()
         {
             IConversion c1 = new Conversion1();
-            Conversions = new List<IConversion> { c1 };
-            this.TaskList = Conversions.Select(x => x.Name).ToList();
+            ConversionsReference = new List<IConversion> { c1 };
+            this.ConversionsAsString = ConversionsReference.Select(x => x.Name).ToList();
 
             ///Список задач, которые может решать программа
             //this.TaskList = new List<string> {
@@ -36,7 +36,14 @@ namespace e_calc
         }
 
 
-
+        public List<string> GetResultQuantities(string ActiveConversion)
+        {
+            return this.ConversionsReference.
+                Where(x => x.Name == ActiveConversion).
+                Select(x => x.QuantitiesAsString).
+                First();
+            
+        }
 
 
 
