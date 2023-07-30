@@ -10,7 +10,7 @@ namespace e_calc
     /// <summary>
     /// Отдельный класс, который управляет всеми данными в приложении, чтобы данные были отдельно от окон WinForms
     /// </summary>
-    public class Model
+    public partial class Model
     {
         public readonly List<String> TaskList;
         private readonly List<IConversion> Conversions;
@@ -36,19 +36,21 @@ namespace e_calc
         }
 
 
+
+
+
+
         /// <summary>
-        /// Эта функция возвращает количество физических величин, которые нужны для выбранного преобразования
+        /// Эта функция возвращает список доступных единиц измерения для выбранной величины
         /// </summary>
         /// <param name="SelectedItem"></param>
         /// <returns></returns>
-        public int GetQuantitiesCount(string SelectedItem)
+        public List<string> UpdateUnits(string SelectedItem)
         {
-            foreach(Conversion1 c in this.Conversions)
-            {
-                if (c.Name == SelectedItem)
-                    return c.OperandsCount;
-            }
-            return 0;
+            PhysicalQuantity q = Helper.GetQuantityByString(SelectedItem);
+            Type t = Helper.GetUnitsByQuantity(q);
+
+
         }
     }
 

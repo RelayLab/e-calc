@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.MainWindowTable = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.TaskCombobox = new System.Windows.Forms.ComboBox();
+            this.ConversionCombobox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -41,8 +41,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.OperandsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.operandControl1 = new e_calc.src.OperandControl();
             this.operandControl2 = new e_calc.src.OperandControl();
+            this.operandControl1 = new e_calc.src.OperandControl();
             this.MainWindowTable.SuspendLayout();
             this.OperandsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.MainWindowTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTable.Controls.Add(this.label1, 0, 0);
-            this.MainWindowTable.Controls.Add(this.TaskCombobox, 0, 1);
+            this.MainWindowTable.Controls.Add(this.ConversionCombobox, 0, 1);
             this.MainWindowTable.Controls.Add(this.label2, 0, 2);
             this.MainWindowTable.Controls.Add(this.label5, 0, 4);
             this.MainWindowTable.Controls.Add(this.comboBox6, 0, 5);
@@ -79,7 +79,7 @@
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTable.Size = new System.Drawing.Size(1268, 409);
+            this.MainWindowTable.Size = new System.Drawing.Size(630, 376);
             this.MainWindowTable.TabIndex = 0;
             // 
             // label1
@@ -95,17 +95,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Что преобразовываем?";
             // 
-            // TaskCombobox
+            // ConversionCombobox
             // 
-            this.MainWindowTable.SetColumnSpan(this.TaskCombobox, 2);
-            this.TaskCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TaskCombobox.FormattingEnabled = true;
-            this.TaskCombobox.Location = new System.Drawing.Point(4, 25);
-            this.TaskCombobox.Margin = new System.Windows.Forms.Padding(4);
-            this.TaskCombobox.Name = "TaskCombobox";
-            this.TaskCombobox.Size = new System.Drawing.Size(363, 29);
-            this.TaskCombobox.TabIndex = 1;
-            this.TaskCombobox.SelectedIndexChanged += new System.EventHandler(this.TaskCombobox_SelectedIndexChanged);
+            this.MainWindowTable.SetColumnSpan(this.ConversionCombobox, 2);
+            this.ConversionCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ConversionCombobox.FormattingEnabled = true;
+            this.ConversionCombobox.Location = new System.Drawing.Point(4, 25);
+            this.ConversionCombobox.Margin = new System.Windows.Forms.Padding(4);
+            this.ConversionCombobox.Name = "ConversionCombobox";
+            this.ConversionCombobox.Size = new System.Drawing.Size(363, 29);
+            this.ConversionCombobox.TabIndex = 1;
+            this.ConversionCombobox.SelectedIndexChanged += new System.EventHandler(this.ConversionCombobox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -113,8 +113,8 @@
             this.label2.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label2, 2);
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(4, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(4, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 21);
             this.label2.TabIndex = 0;
@@ -126,7 +126,7 @@
             this.label5.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label5, 2);
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(4, 252);
+            this.label5.Location = new System.Drawing.Point(4, 210);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 21);
@@ -142,8 +142,8 @@
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.comboBox6.Location = new System.Drawing.Point(4, 277);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox6.Location = new System.Drawing.Point(5, 236);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(171, 29);
             this.comboBox6.TabIndex = 1;
@@ -154,8 +154,8 @@
             this.label8.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label8, 2);
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(4, 310);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(4, 275);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 21);
             this.label8.TabIndex = 0;
@@ -169,8 +169,8 @@
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.comboBox9.Location = new System.Drawing.Point(183, 335);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox9.Location = new System.Drawing.Point(188, 301);
+            this.comboBox9.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(171, 29);
             this.comboBox9.TabIndex = 1;
@@ -181,18 +181,18 @@
             this.label7.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label7, 2);
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(4, 368);
+            this.label7.Location = new System.Drawing.Point(4, 335);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 21);
+            this.label7.Size = new System.Drawing.Size(85, 21);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Формула";
+            this.label7.Text = "Справка:";
             // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MainWindowTable.SetColumnSpan(this.richTextBox1, 2);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 392);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 359);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(100, 14);
@@ -202,7 +202,8 @@
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(3, 334);
+            this.textBox2.Location = new System.Drawing.Point(5, 301);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(173, 27);
             this.textBox2.TabIndex = 2;
@@ -215,22 +216,10 @@
             this.MainWindowTable.SetColumnSpan(this.OperandsPanel, 2);
             this.OperandsPanel.Controls.Add(this.operandControl2);
             this.OperandsPanel.Controls.Add(this.operandControl1);
-            this.OperandsPanel.Location = new System.Drawing.Point(3, 82);
+            this.OperandsPanel.Location = new System.Drawing.Point(3, 87);
             this.OperandsPanel.Name = "OperandsPanel";
-            this.OperandsPanel.Size = new System.Drawing.Size(1262, 167);
+            this.OperandsPanel.Size = new System.Drawing.Size(624, 120);
             this.OperandsPanel.TabIndex = 3;
-            // 
-            // operandControl1
-            // 
-            this.operandControl1.AutoSize = true;
-            this.operandControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.operandControl1.BackColor = System.Drawing.SystemColors.Window;
-            this.operandControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.operandControl1.Location = new System.Drawing.Point(636, 5);
-            this.operandControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.operandControl1.Name = "operandControl1";
-            this.operandControl1.Size = new System.Drawing.Size(621, 157);
-            this.operandControl1.TabIndex = 0;
             // 
             // operandControl2
             // 
@@ -241,8 +230,20 @@
             this.operandControl2.Location = new System.Drawing.Point(5, 5);
             this.operandControl2.Margin = new System.Windows.Forms.Padding(5);
             this.operandControl2.Name = "operandControl2";
-            this.operandControl2.Size = new System.Drawing.Size(621, 157);
+            this.operandControl2.Size = new System.Drawing.Size(302, 110);
             this.operandControl2.TabIndex = 1;
+            // 
+            // operandControl1
+            // 
+            this.operandControl1.AutoSize = true;
+            this.operandControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.operandControl1.BackColor = System.Drawing.SystemColors.Window;
+            this.operandControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.operandControl1.Location = new System.Drawing.Point(317, 5);
+            this.operandControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.operandControl1.Name = "operandControl1";
+            this.operandControl1.Size = new System.Drawing.Size(302, 110);
+            this.operandControl1.TabIndex = 0;
             // 
             // MainWindow
             // 
@@ -274,7 +275,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox TaskCombobox;
+        private System.Windows.Forms.ComboBox ConversionCombobox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox richTextBox1;

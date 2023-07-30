@@ -9,7 +9,10 @@ namespace e_calc
 {
 
     
-    enum PhysicalQuantity { Voltage, Current, Power, Energy };
+    enum PhysicalQuantity { Voltage, Current, ActivePower, Energy };
+    enum UnitsVoltage { V, kV };
+    enum UnitsCurrent { A, kA };
+    enum UnitsActivePower { W, kW, MW };
 
     /// <summary>
     /// Вспомогательный класс, который содержит некоторые общие методы для разных классов, например, доступ к строковому значению по заданному enum 
@@ -22,10 +25,61 @@ namespace e_calc
         private static Dictionary<PhysicalQuantity, String> QuantityDictionary =
             new Dictionary<PhysicalQuantity, string>
             {
-                { PhysicalQuantity.Voltage, "Напряжение" },
-                { PhysicalQuantity.Current, "Ток"        },
-                { PhysicalQuantity.Power  , "Мощность"   }
+                { PhysicalQuantity.Voltage,     "Напряжение"        },
+                { PhysicalQuantity.Current,     "Ток"               },
+                { PhysicalQuantity.ActivePower, "Активная мощность" }
             };
+
+        private static Dictionary<UnitsVoltage, String> UnitsVoltageDictionary =
+            new Dictionary<UnitsVoltage, string>
+            {
+                { UnitsVoltage.V,     "В"       },
+                { UnitsVoltage.kV,    "кВ"      }
+            };
+
+        private static Dictionary<UnitsCurrent, String> UnitsCurrentDictionary =
+            new Dictionary<UnitsCurrent, string>
+            {
+                { UnitsCurrent.A,     "А"       },
+                { UnitsCurrent.kA,    "кА"      }
+            };
+
+        private static Dictionary<UnitsActivePower, String> UnitsActivePowerDictionary =
+            new Dictionary<UnitsActivePower, string>
+            {
+                { UnitsActivePower.W,     "Вт"       },
+                { UnitsActivePower.kW,    "кВт"      },
+                { UnitsActivePower.MW,    "МВт"      }
+            };
+
+
+        /// <summary>
+        /// Эта функция возвращает тип физической величины по заданной строке
+        /// </summary>
+        /// <param name="QuantityAsString">тип в формате строки</param>
+        /// <returns>тип в формате enum PhysicalQuantity</returns>
+        public static PhysicalQuantity GetQuantityByString(string QuantityAsString)
+        {
+            return QuantityDictionary.Where(x => x.Value == QuantityAsString).Select(x => x.Key).First();
+        }
+
+        public static Type GetUnitsByQuantity(PhysicalQuantity quantity)
+        {
+            Type VoltageType     = UnitsVoltageDictionary.GetType();
+            Type CurrentType     = UnitsCurrentDictionary.GetType();
+            Type ActivePowerType = UnitsActivePowerDictionary.GetType();
+
+            if (quantity.GetType() == VoltageType)
+                return VoltageType;
+
+            if (quantity.GetType() == CurrentType)
+                return CurrentType;
+
+            if (quantity.GetType() == ActivePowerType)
+                return ActivePowerType;
+
+            return null;
+        }
 
         /// <summary>
         /// Эта функция преобразует enum к их строковому представлению с помощью словаря Dictionary, определённого в этом же классе Helper
@@ -45,9 +99,14 @@ namespace e_calc
                 {
                     QuantityAsString = "ошибка!";
                 }
+                else
+                {
+                    OutputList.Add(QuantityAsString);
+                }
             }
             return OutputList;
         }
+
     }
 
 

@@ -64,6 +64,9 @@
     <Compile Include="src\MainWindow\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\MainWindow\TaskCombobox_SelectedIndexChanged.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="src\Model\Model.cs" />
     <Compile Include="src\OperandControl\OperandControl.cs">
       <SubType>UserControl</SubType>

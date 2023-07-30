@@ -34,39 +34,11 @@ namespace e_calc
             MainModel = model;
 
             //Загружаем список всех конверторов в первый комбобокс на экране
-            this.TaskCombobox.DataSource = MainModel.TaskList;
-            this.TaskCombobox.SelectedIndex = 0;
-            ResizeCombobox(TaskCombobox);
+            this.ConversionCombobox.DataSource = MainModel.TaskList;
+            this.ConversionCombobox.SelectedIndex = 0;
+            ResizeCombobox(ConversionCombobox);
 
-            //дальнейшая инициализация происходит через функцию обновления этого комбобокса TaskCombobox_SelectedIndexChanged
+            //дальнейшая инициализация происходит через функцию обновления этого комбобокса ConversionCombobox_SelectedIndexChanged
         }
-
-        /// <summary>
-        /// Эта функция вызывается при выборе любого элемента из комбобокса
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TaskCombobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.SuspendLayout();
-
-            this.OperandsPanel.Controls.Clear();
-
-            //получаем из модели количество операндов (окон Величина 1,2...), которые будут отображаться на экране
-            int QuantitiesCount = MainModel.GetQuantitiesCount(
-                this.TaskCombobox.SelectedItem.ToString());
-
-            for (int i = 0; i < QuantitiesCount; i++)
-            {
-                OperandControl oc = new OperandControl(i);
-                OperandsPanel.Controls.Add(oc);
-            }
-
-            this.ResumeLayout();
-        }
-
-        
-
-
     }
 }

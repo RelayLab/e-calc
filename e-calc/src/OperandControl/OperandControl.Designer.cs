@@ -31,22 +31,21 @@
             this.OperandGroupbox = new System.Windows.Forms.GroupBox();
             this.OperandTable = new System.Windows.Forms.TableLayoutPanel();
             this.OperandQuantityCombobox = new System.Windows.Forms.ComboBox();
-            this.OperandUnitCombobox = new System.Windows.Forms.ComboBox();
             this.OperandValueTextbox = new System.Windows.Forms.TextBox();
+            this.OperandUnitCombobox = new System.Windows.Forms.ComboBox();
             this.OperandGroupbox.SuspendLayout();
             this.OperandTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // OperandGroupbox
             // 
-            this.OperandGroupbox.AutoSize = true;
             this.OperandGroupbox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OperandGroupbox.Controls.Add(this.OperandTable);
             this.OperandGroupbox.Location = new System.Drawing.Point(0, 0);
             this.OperandGroupbox.Margin = new System.Windows.Forms.Padding(5);
             this.OperandGroupbox.Name = "OperandGroupbox";
             this.OperandGroupbox.Padding = new System.Windows.Forms.Padding(5, 20, 5, 5);
-            this.OperandGroupbox.Size = new System.Drawing.Size(308, 132);
+            this.OperandGroupbox.Size = new System.Drawing.Size(297, 105);
             this.OperandGroupbox.TabIndex = 4;
             this.OperandGroupbox.TabStop = false;
             this.OperandGroupbox.Text = "Величина 1";
@@ -59,15 +58,15 @@
             this.OperandTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.OperandTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.OperandTable.Controls.Add(this.OperandQuantityCombobox, 0, 0);
-            this.OperandTable.Controls.Add(this.OperandUnitCombobox, 1, 1);
             this.OperandTable.Controls.Add(this.OperandValueTextbox, 0, 1);
+            this.OperandTable.Controls.Add(this.OperandUnitCombobox, 1, 1);
             this.OperandTable.Location = new System.Drawing.Point(5, 20);
             this.OperandTable.Margin = new System.Windows.Forms.Padding(5);
             this.OperandTable.Name = "OperandTable";
             this.OperandTable.RowCount = 2;
             this.OperandTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.OperandTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.OperandTable.Size = new System.Drawing.Size(293, 82);
+            this.OperandTable.Size = new System.Drawing.Size(287, 78);
             this.OperandTable.TabIndex = 1;
             // 
             // OperandQuantityCombobox
@@ -79,11 +78,24 @@
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.OperandQuantityCombobox.Location = new System.Drawing.Point(7, 6);
-            this.OperandQuantityCombobox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.OperandQuantityCombobox.Location = new System.Drawing.Point(5, 5);
+            this.OperandQuantityCombobox.Margin = new System.Windows.Forms.Padding(5);
             this.OperandQuantityCombobox.Name = "OperandQuantityCombobox";
             this.OperandQuantityCombobox.Size = new System.Drawing.Size(174, 29);
             this.OperandQuantityCombobox.TabIndex = 1;
+            this.OperandQuantityCombobox.SelectedIndexChanged += new System.EventHandler(this.OperandQuantityCombobox_SelectedIndexChanged);
+            // 
+            // OperandValueTextbox
+            // 
+            this.OperandValueTextbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.OperandValueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OperandValueTextbox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OperandValueTextbox.Location = new System.Drawing.Point(5, 45);
+            this.OperandValueTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.OperandValueTextbox.Name = "OperandValueTextbox";
+            this.OperandValueTextbox.Size = new System.Drawing.Size(176, 27);
+            this.OperandValueTextbox.TabIndex = 2;
+            this.OperandValueTextbox.Text = "100";
             // 
             // OperandUnitCombobox
             // 
@@ -94,22 +106,11 @@
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.OperandUnitCombobox.Location = new System.Drawing.Point(195, 47);
-            this.OperandUnitCombobox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.OperandUnitCombobox.Location = new System.Drawing.Point(191, 44);
+            this.OperandUnitCombobox.Margin = new System.Windows.Forms.Padding(5);
             this.OperandUnitCombobox.Name = "OperandUnitCombobox";
             this.OperandUnitCombobox.Size = new System.Drawing.Size(91, 29);
             this.OperandUnitCombobox.TabIndex = 1;
-            // 
-            // OperandValueTextbox
-            // 
-            this.OperandValueTextbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.OperandValueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OperandValueTextbox.Location = new System.Drawing.Point(5, 48);
-            this.OperandValueTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.OperandValueTextbox.Name = "OperandValueTextbox";
-            this.OperandValueTextbox.Size = new System.Drawing.Size(176, 27);
-            this.OperandValueTextbox.TabIndex = 2;
-            this.OperandValueTextbox.Text = "100";
             // 
             // OperandControl
             // 
@@ -120,15 +121,14 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.OperandGroupbox);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "OperandControl";
-            this.Size = new System.Drawing.Size(313, 137);
+            this.Size = new System.Drawing.Size(302, 110);
             this.OperandGroupbox.ResumeLayout(false);
             this.OperandGroupbox.PerformLayout();
             this.OperandTable.ResumeLayout(false);
             this.OperandTable.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
