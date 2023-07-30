@@ -52,17 +52,6 @@ namespace e_calc.src
             //выпадающий список с единицами измерения заполняется в другом событии OperandQuantityCombobox_SelectedIndexChanged
         }
 
-        /// <summary>
-        /// Это событие появляется при изменении
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OperandQuantityCombobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<string> Units = 
-                this._MainWindow.UpdateUnits(
-                (string)
-                this.OperandQuantityCombobox.SelectedItem);
-        }
+
     }
 }

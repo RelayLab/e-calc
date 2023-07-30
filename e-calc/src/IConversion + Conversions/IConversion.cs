@@ -21,7 +21,7 @@ namespace e_calc
         /// <summary>
         /// Набор физических величин, которые могут быть выбраны в качестве одного из операндов (не путать с количеством операндов!). Задаётся в конструкторе наследуемого класса.
         /// </summary>
-        List<PhysicalQuantity> Quantities { get; }
+        List<IPhysicalQuantity> Quantities { get; }
 
         /// <summary>
         /// То же, что Quantities, но в форме строк

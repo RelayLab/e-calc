@@ -14,7 +14,7 @@ namespace e_calc
     {
         public string Name { get; }
         
-        public List<PhysicalQuantity> Quantities { get; }
+        public List<IPhysicalQuantity> Quantities { get; }
         public List<string> QuantitiesAsString { get; }
 
         public int OperandsCount { get; }
@@ -26,15 +26,15 @@ namespace e_calc
         {
             OperandsCount = 2;
             Name = "любые величины";
-            Quantities = new List<PhysicalQuantity>
+            Quantities = new List<IPhysicalQuantity>
             {
-                PhysicalQuantity.Voltage,
-                PhysicalQuantity.Current,
-                PhysicalQuantity.Power
+                new QuantityVoltage(),
+                new QuantityCurrent(),
+                new QuantityActivePower()
             };
 
-            QuantitiesAsString = Helper.QuantitiesAsString(
-                Quantities);
+            QuantitiesAsString = 
+                Quantities.Select(x => x.Name).ToList();
         }
     }
 

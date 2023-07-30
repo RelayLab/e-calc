@@ -52,9 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\Conversion1.cs" />
-    <Compile Include="src\Helper.cs" />
-    <Compile Include="src\IConversion.cs" />
+    <Compile Include="src\IConversion + Conversions\Conversion1.cs" />
+    <Compile Include="src\Helper\Helper.cs" />
+    <Compile Include="src\Helper\QuantitiesAsString.cs" />
+    <Compile Include="src\IConversion + Conversions\IConversion.cs" />
+    <Compile Include="src\IPhysicalQuantity + Quantities\IPhysicalQuantity.cs" />
+    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityCurrent.cs" />
+    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityActivePower.cs" />
     <Compile Include="src\MainWindow\ResizeCombobox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +71,8 @@
     <Compile Include="src\MainWindow\TaskCombobox_SelectedIndexChanged.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="src\Model\ConversionChanged.cs" />
+    <Compile Include="src\Model\GetQuantitiesCount.cs" />
     <Compile Include="src\Model\Model.cs" />
     <Compile Include="src\OperandControl\OperandControl.cs">
       <SubType>UserControl</SubType>
@@ -74,8 +80,12 @@
     <Compile Include="src\OperandControl\OperandControl.Designer.cs">
       <DependentUpon>OperandControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\OperandControl\OperandQuantityCombobox_SelectedIndexChanged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityVoltage.cs" />
     <EmbeddedResource Include="src\MainWindow\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>

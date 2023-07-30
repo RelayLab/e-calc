@@ -47,10 +47,7 @@ namespace e_calc
         /// <returns></returns>
         public List<string> UpdateUnits(string SelectedItem)
         {
-            PhysicalQuantity q = Helper.GetQuantityByString(SelectedItem);
-            Type t = Helper.GetUnitsByQuantity(q);
-
-
+            return Helper.GetUnitsByString(SelectedItem);
         }
     }
 

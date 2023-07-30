@@ -66,7 +66,7 @@
             this.OperandTable.RowCount = 2;
             this.OperandTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.OperandTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.OperandTable.Size = new System.Drawing.Size(287, 78);
+            this.OperandTable.Size = new System.Drawing.Size(287, 76);
             this.OperandTable.TabIndex = 1;
             // 
             // OperandQuantityCombobox
@@ -90,7 +90,7 @@
             this.OperandValueTextbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.OperandValueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.OperandValueTextbox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OperandValueTextbox.Location = new System.Drawing.Point(5, 45);
+            this.OperandValueTextbox.Location = new System.Drawing.Point(5, 44);
             this.OperandValueTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.OperandValueTextbox.Name = "OperandValueTextbox";
             this.OperandValueTextbox.Size = new System.Drawing.Size(176, 27);
@@ -106,7 +106,7 @@
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.OperandUnitCombobox.Location = new System.Drawing.Point(191, 44);
+            this.OperandUnitCombobox.Location = new System.Drawing.Point(191, 47);
             this.OperandUnitCombobox.Margin = new System.Windows.Forms.Padding(5);
             this.OperandUnitCombobox.Name = "OperandUnitCombobox";
             this.OperandUnitCombobox.Size = new System.Drawing.Size(91, 29);
