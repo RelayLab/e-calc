@@ -13,13 +13,13 @@ namespace e_calc
         /// <summary>
         /// Эта функция возвращает количество физических величин, которые нужны для выбранного преобразования
         /// </summary>
-        /// <param name="SelectedItem">название нужного преобразования</param>
+        /// <param name="ActiveConversion">название нужного преобразования</param>
         /// <returns>количество физических величин, которые нужны для выбранного преобразования</returns>
-        public int GetQuantitiesCount(string SelectedItem)
+        public int GetOperandsCount(string ActiveConversion)
         {
             foreach (Conversion1 c in this.ConversionsReference)
             {
-                if (c.Name == SelectedItem)
+                if (c.Name == ActiveConversion)
                     return c.OperandsCount;
             }
             return 0;

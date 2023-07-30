@@ -45,6 +45,13 @@ namespace e_calc
             
         }
 
+        public string GetConversionInfo(string ActiveConversion)
+        {
+            return this.ConversionsReference.
+                Where(x => x.Name == ActiveConversion).
+                Select(x => x.ConversionInfo).
+                First();
+        }
 
 
         /// <summary>

@@ -19,6 +19,8 @@ namespace e_calc
 
         public int OperandsCount { get; }
 
+        public string ConversionInfo { get; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -35,6 +37,9 @@ namespace e_calc
 
             QuantitiesAsString = 
                 Quantities.Select(x => x.Name).ToList();
+
+            ConversionInfo = 
+                "Пример информации о преобразовании. Например, может быть использована формула P = sqrt(3)*Uф*I";
         }
     }
 

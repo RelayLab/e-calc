@@ -38,7 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ResultUnitCombobox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.InfoTextbox = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.OperandsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.operandControl2 = new e_calc.src.OperandControl();
@@ -62,7 +62,7 @@
             this.MainWindowTable.Controls.Add(this.label8, 0, 6);
             this.MainWindowTable.Controls.Add(this.ResultUnitCombobox, 1, 7);
             this.MainWindowTable.Controls.Add(this.label7, 0, 8);
-            this.MainWindowTable.Controls.Add(this.richTextBox1, 0, 9);
+            this.MainWindowTable.Controls.Add(this.InfoTextbox, 0, 9);
             this.MainWindowTable.Controls.Add(this.textBox2, 0, 7);
             this.MainWindowTable.Controls.Add(this.OperandsPanel, 0, 3);
             this.MainWindowTable.Location = new System.Drawing.Point(5, 5);
@@ -79,7 +79,7 @@
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTable.Size = new System.Drawing.Size(660, 378);
+            this.MainWindowTable.Size = new System.Drawing.Size(660, 464);
             this.MainWindowTable.TabIndex = 0;
             // 
             // label1
@@ -189,16 +189,17 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Справка:";
             // 
-            // richTextBox1
+            // InfoTextbox
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MainWindowTable.SetColumnSpan(this.richTextBox1, 2);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 361);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(100, 14);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "S = \\/3 U I";
+            this.InfoTextbox.BackColor = System.Drawing.SystemColors.Window;
+            this.InfoTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MainWindowTable.SetColumnSpan(this.InfoTextbox, 2);
+            this.InfoTextbox.Location = new System.Drawing.Point(3, 361);
+            this.InfoTextbox.Name = "InfoTextbox";
+            this.InfoTextbox.ReadOnly = true;
+            this.InfoTextbox.Size = new System.Drawing.Size(654, 100);
+            this.InfoTextbox.TabIndex = 2;
+            this.InfoTextbox.Text = "S = \\/3 U I";
             // 
             // textBox2
             // 
@@ -279,7 +280,7 @@
         private System.Windows.Forms.ComboBox ConversionCombobox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox InfoTextbox;
         private System.Windows.Forms.ComboBox ResultUnitCombobox;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.FlowLayoutPanel OperandsPanel;

@@ -22,17 +22,16 @@ namespace e_calc
         {
             this.SuspendLayout();
 
+            string ActiveConversion = (string)this.ConversionCombobox.SelectedItem;
+
             this.OperandsPanel.Controls.Clear();
 
-            //получаем из модели количество операндов (окон Величина 1,2...), которые будут отображаться на экране
-            int QuantitiesCount = MainModel.GetQuantitiesCount(
-                this.ConversionCombobox.SelectedItem.ToString());
-
-            List<string> QuantitiesAsString = this.MainModel.ConversionChanged(
-                this.ConversionCombobox.Text);
+            //получаем из модели список операндов (окон Величина 1,2...), которые будут отображаться на экране
+            List<string> QuantitiesAsString = this.MainModel.ConversionChanged(ActiveConversion);
+            int OperandsCount               = this.MainModel.GetOperandsCount(ActiveConversion);
 
             //добавлем на экран новые окошки для каждой физической величины
-            for (int i = 0; i < QuantitiesCount; i++)
+            for (int i = 0; i < OperandsCount; i++)
             {
                 OperandControl oc = new OperandControl(i, QuantitiesAsString, this);
                 OperandsPanel.Controls.Add(oc);
@@ -41,13 +40,13 @@ namespace e_calc
 
 
             ResultQuantityCombobox.Items.Clear();
-            string ActiveConversion = (string)this.ConversionCombobox.SelectedItem;
+            
             ResultQuantityCombobox.Items.AddRange(
                 this.MainModel.GetResultQuantities(ActiveConversion).ToArray());
             ResultQuantityCombobox.SelectedIndex = 0;
             Helper.ResizeCombobox(ResultQuantityCombobox);
 
-
+            InfoTextbox.Text = MainModel.GetConversionInfo(ActiveConversion);
 
 
             this.ResumeLayout();
