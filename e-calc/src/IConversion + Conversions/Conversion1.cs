@@ -38,12 +38,12 @@ namespace e_calc
             ConversionInfo = 
                 "Пример информации о преобразовании. Например, может быть использована формула P = sqrt(3)*Uф*I";
         }
+        public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
-    {
-        throw NotImplementedException();
-    }
 }
 
 //    "любые величины",

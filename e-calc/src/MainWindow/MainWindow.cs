@@ -104,11 +104,11 @@ namespace e_calc
         /// <summary>
         /// Физическая величина (ток, напряжение и т.п.)
         /// </summary>
-        readonly string Quantity;
+        public string Quantity { get; private set; }
         /// <summary>
         /// Численное значение величины
         /// </summary>
-        readonly string Value;
+        public string Value { get; private set; }
         /// <summary>
         /// Единицы измерения (мВ, В, кВ и т.п.)
         /// </summary>

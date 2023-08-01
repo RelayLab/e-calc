@@ -70,7 +70,7 @@ namespace e_calc
                 First();
         }
 
-        public static List<PhysicalQuantityEnum> GetQuantitiesByString(string SelectedItem)
+        public static PhysicalQuantityEnum GetQuantityByString(string SelectedItem)
         {
             return QuantitiesReference.
                 Where(x => x.Name == SelectedItem).

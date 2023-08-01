@@ -35,7 +35,7 @@ namespace e_calc
             return true;
         }
 
-        List<double> SortValuesByType(
+        public List<double> SortValuesByType(
                             List<PhysicalQuantityEnum> Quantities,
                             List<double> Values)
         {

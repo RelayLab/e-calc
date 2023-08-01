@@ -38,7 +38,7 @@ namespace e_calc
         /// </summary>
         string ConversionInfo { get; }
 
-        private List<Formula> Formulas { get; set; }
+        List<Formula> Formulas { get; set; }
 
         /// <summary>
         /// Эта функция выполняет требуемое преобразвание по заданным данным
