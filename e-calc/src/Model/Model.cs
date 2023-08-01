@@ -21,18 +21,11 @@ namespace e_calc
         public Model()
         {
             IConversion c1 = new Conversion1();
-            ConversionsReference = new List<IConversion> { c1 };
+            IConversion c2 = new Conversion2();
+            ConversionsReference = new List<IConversion> { c1, c2 };
             this.ConversionsAsString = ConversionsReference.Select(x => x.Name).ToList();
 
             ///Список задач, которые может решать программа
-            //this.TaskList = new List<string> {
-            //    "любые величины",
-            //    "ток(А) - напряжение(В) - сопротивление(Ом) - мощность(кВт)" ,
-            //    "мощность(кВт) - энергия(кАч)",
-            //    "электрическая(кВт) - тепловая(ккал) мощность",
-            //    "активная(кВт) - полная(кВА) мощность",
-            //    "активная(кВт) - реактивная(кВА) мощность",
-            //    "косинус(cos φ) - тангенс(tg φ) коэффициента мощности" };
         }
 
 
@@ -62,6 +55,23 @@ namespace e_calc
         public List<string> UpdateUnits(string SelectedItem)
         {
             return Helper.GetUnitsByString(SelectedItem);
+        }
+
+
+        /// <summary>
+        /// Эта функция запускает расчёт
+        /// </summary>
+        /// <param name="info"></param>
+        public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo, string ActiveConversion)
+        {
+            IConversion conv = this.ConversionsReference.
+                Where(x => x.Name == ActiveConversion).First();
+
+            string Result = conv.PerformConversion(
+                    Infos,
+                    ResultInfo);
+
+            return Result;
         }
     }
 

@@ -37,6 +37,14 @@ namespace e_calc
         /// Любая информация: формулы, описание доп. опций и т.п.
         /// </summary>
         string ConversionInfo { get; }
+
+        private List<Formula> Formulas { get; set; }
+
+        /// <summary>
+        /// Эта функция выполняет требуемое преобразвание по заданным данным
+        /// </summary>
+        /// <returns></returns>
+        string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo);
     }
 
 }

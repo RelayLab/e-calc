@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 namespace e_calc
 {
     /// <summary>
-    /// Физическая единица - Активная мощность
+    /// Физическая единица - Тепловая мощность
     /// </summary>
-    internal class QuantityActivePower : IPhysicalQuantity
+    internal class QuantityHeatPower : IPhysicalQuantity
     {
         public string Name { get; }
         public PhysicalQuantityEnum NameAsEnum { get; }
         public List<string> Units { get; }
         public List<Units> UnitsAsEnum { get; }
-        public QuantityActivePower()
+        public QuantityHeatPower()
         {
-            this.Name = "Активная мощность";
-            this.NameAsEnum = PhysicalQuantityEnum.ActivePower;
+            this.Name = "Тепловая мощность";
+            this.NameAsEnum = PhysicalQuantityEnum.HeatPower;
             this.Units = new List<string>
             {
-                "Вт",
-                "кВт",
-                "МВт",
-                "ГВт",
+                "кал/ч",
+                "ккал/ч",
+                "Мкал/ч",
+                "Гкал/ч",
             };
             //this.UnitsAsEnum = new List<Units>
             //{

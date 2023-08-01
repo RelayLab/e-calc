@@ -16,6 +16,23 @@ namespace e_calc.src
     public partial class OperandControl : UserControl
     {
         private MainWindow _MainWindow;
+        private int OperandNumber;
+        public string Quantity
+        {
+            get 
+            { return this.OperandQuantityCombobox.Text; }
+        }
+        public string Value
+        {
+            get 
+            { return this.OperandValueTextbox.Text; }
+        }
+        public string Unit 
+        {
+            get 
+            { return this.OperandUnitCombobox.Text; } 
+        }
+
         /// <summary>
         /// Конструктор по умолчанию. Здесь ничего не меняем, нужен для работы дизайнера
         /// </summary>
@@ -33,11 +50,11 @@ namespace e_calc.src
             InitializeComponent();
             this.SuspendLayout();
 
-            _MainWindow = main_window;  
-            
+            _MainWindow = main_window;
+
             //добавляем название для этого элемента "Величина 1,2 ..."
-            SequenceNumber++;
-            this.OperandGroupbox.Text = "Величина " + SequenceNumber;
+            this.OperandNumber = SequenceNumber + 1;
+            this.OperandGroupbox.Text = "Величина " + OperandNumber;
 
             //добавляем в список Combobox все возможные физические величины
             this.OperandQuantityCombobox.Items.Clear();
@@ -54,6 +71,14 @@ namespace e_calc.src
             //выпадающий список с единицами измерения заполняется в другом событии OperandQuantityCombobox_SelectedIndexChanged
         }
 
+        private void OperandUnitCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this._MainWindow.PerformConversion();
+        }
 
+        private void OperandValueTextbox_Validated(object sender, EventArgs e)
+        {
+            this._MainWindow.PerformConversion();
+        }
     }
 }

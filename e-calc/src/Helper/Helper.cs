@@ -16,6 +16,7 @@ namespace e_calc
         Voltage, 
         Current, 
         ActivePower, 
+        HeatPower,
         Energy 
     };
 
@@ -44,7 +45,8 @@ namespace e_calc
         {
             new QuantityVoltage(),
             new QuantityCurrent(),
-            new QuantityActivePower()
+            new QuantityActivePower(),
+            new QuantityHeatPower()
             //new QuantityEnergy()
         };
 
@@ -65,6 +67,14 @@ namespace e_calc
             return QuantitiesReference.
                 Where(x => x.Name == SelectedItem).
                 Select(x => x.Units).
+                First();
+        }
+
+        public static List<PhysicalQuantityEnum> GetQuantitiesByString(string SelectedItem)
+        {
+            return QuantitiesReference.
+                Where(x => x.Name == SelectedItem).
+                Select(x => x.NameAsEnum).
                 First();
         }
 

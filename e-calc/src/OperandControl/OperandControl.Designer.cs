@@ -95,7 +95,8 @@
             this.OperandValueTextbox.Name = "OperandValueTextbox";
             this.OperandValueTextbox.Size = new System.Drawing.Size(176, 27);
             this.OperandValueTextbox.TabIndex = 2;
-            this.OperandValueTextbox.Text = "100";
+            this.OperandValueTextbox.Text = "0";
+            this.OperandValueTextbox.Validated += new System.EventHandler(this.OperandValueTextbox_Validated);
             // 
             // OperandUnitCombobox
             // 
@@ -111,6 +112,7 @@
             this.OperandUnitCombobox.Name = "OperandUnitCombobox";
             this.OperandUnitCombobox.Size = new System.Drawing.Size(106, 29);
             this.OperandUnitCombobox.TabIndex = 1;
+            this.OperandUnitCombobox.SelectedIndexChanged += new System.EventHandler(this.OperandUnitCombobox_SelectedIndexChanged);
             // 
             // OperandControl
             // 

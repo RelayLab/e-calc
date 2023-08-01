@@ -17,7 +17,7 @@ namespace e_calc
         /// <returns>количество физических величин, которые нужны для выбранного преобразования</returns>
         public int GetOperandsCount(string ActiveConversion)
         {
-            foreach (Conversion1 c in this.ConversionsReference)
+            foreach (IConversion c in this.ConversionsReference)
             {
                 if (c.Name == ActiveConversion)
                     return c.OperandsCount;

@@ -21,9 +21,6 @@ namespace e_calc
 
         public string ConversionInfo { get; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public Conversion1()
         {
             OperandsCount = 2;
@@ -43,4 +40,16 @@ namespace e_calc
         }
     }
 
+    public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
+    {
+        throw NotImplementedException();
+    }
 }
+
+//    "любые величины",
+//    "ток(А) - напряжение(В) - сопротивление(Ом) - мощность(кВт)" ,
+//    "мощность(кВт) - энергия(кАч)",
+//    "электрическая(кВт) - тепловая(ккал) мощность",
+//    "активная(кВт) - полная(кВА) мощность",
+//    "активная(кВт) - реактивная(кВА) мощность",
+//    "косинус(cos φ) - тангенс(tg φ) коэффициента мощности"

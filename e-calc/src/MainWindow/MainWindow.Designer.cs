@@ -39,7 +39,7 @@
             this.ResultUnitCombobox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.InfoTextbox = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ResultValueTextbox = new System.Windows.Forms.TextBox();
             this.OperandsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.operandControl2 = new e_calc.src.OperandControl();
             this.operandControl1 = new e_calc.src.OperandControl();
@@ -63,7 +63,7 @@
             this.MainWindowTable.Controls.Add(this.ResultUnitCombobox, 1, 7);
             this.MainWindowTable.Controls.Add(this.label7, 0, 8);
             this.MainWindowTable.Controls.Add(this.InfoTextbox, 0, 9);
-            this.MainWindowTable.Controls.Add(this.textBox2, 0, 7);
+            this.MainWindowTable.Controls.Add(this.ResultValueTextbox, 0, 7);
             this.MainWindowTable.Controls.Add(this.OperandsPanel, 0, 3);
             this.MainWindowTable.Location = new System.Drawing.Point(5, 5);
             this.MainWindowTable.Margin = new System.Windows.Forms.Padding(4);
@@ -194,6 +194,7 @@
             this.InfoTextbox.BackColor = System.Drawing.SystemColors.Window;
             this.InfoTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MainWindowTable.SetColumnSpan(this.InfoTextbox, 2);
+            this.InfoTextbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.InfoTextbox.Location = new System.Drawing.Point(3, 361);
             this.InfoTextbox.Name = "InfoTextbox";
             this.InfoTextbox.ReadOnly = true;
@@ -201,15 +202,16 @@
             this.InfoTextbox.TabIndex = 2;
             this.InfoTextbox.Text = "S = \\/3 U I";
             // 
-            // textBox2
+            // ResultValueTextbox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(5, 301);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 27);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "100";
+            this.ResultValueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ResultValueTextbox.Location = new System.Drawing.Point(5, 301);
+            this.ResultValueTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.ResultValueTextbox.Name = "ResultValueTextbox";
+            this.ResultValueTextbox.ReadOnly = true;
+            this.ResultValueTextbox.Size = new System.Drawing.Size(173, 27);
+            this.ResultValueTextbox.TabIndex = 2;
+            this.ResultValueTextbox.Text = "0";
             // 
             // OperandsPanel
             // 
@@ -282,7 +284,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox InfoTextbox;
         private System.Windows.Forms.ComboBox ResultUnitCombobox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ResultValueTextbox;
         private System.Windows.Forms.FlowLayoutPanel OperandsPanel;
         private src.OperandControl operandControl2;
         private src.OperandControl operandControl1;
