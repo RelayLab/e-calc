@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Formula.cs" />
     <Compile Include="src\IConversion + Conversions\Conversion2.cs" />
     <Compile Include="src\IConversion + Conversions\Conversion1.cs" />
     <Compile Include="src\Helper\Helper.cs" />

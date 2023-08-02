@@ -64,7 +64,17 @@ namespace e_calc
         /// </summary>
         public void PerformConversion()
         {
-            //сведения обо всех введенных на экранах величинах кладём в список
+            //проверяем, что во всех окнах введены данные
+
+            if (this.OperandsPanel.Controls.Count == 0)
+                return;
+
+            foreach (OperandControl oc in this.OperandsPanel.Controls)
+            {
+                if (oc.Value == "" || oc.Value == null)
+                { return; }
+            }
+                //сведения обо всех введенных на экранах величинах кладём в список
             List<OperandInfo> Infos = new List<OperandInfo>();
             int i = 0;
             foreach (OperandControl oc in this.OperandsPanel.Controls)

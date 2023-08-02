@@ -20,6 +20,7 @@ namespace e_calc
         public int OperandsCount { get; }
 
         public string ConversionInfo { get; }
+        public List<Formula> Formulas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Conversion1()
         {
@@ -40,7 +41,8 @@ namespace e_calc
         }
         public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
         {
-            throw new NotImplementedException();
+            return "0";
+            //throw new NotImplementedException();
         }
     }
 

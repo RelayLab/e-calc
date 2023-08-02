@@ -96,7 +96,7 @@
             this.OperandValueTextbox.Size = new System.Drawing.Size(176, 27);
             this.OperandValueTextbox.TabIndex = 2;
             this.OperandValueTextbox.Text = "0";
-            this.OperandValueTextbox.Validated += new System.EventHandler(this.OperandValueTextbox_Validated);
+            this.OperandValueTextbox.TextChanged += new System.EventHandler(this.OperandValueTextbox_TextChanged);
             // 
             // OperandUnitCombobox
             // 
