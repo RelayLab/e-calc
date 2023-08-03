@@ -28,6 +28,8 @@ namespace e_calc
 
             Helper.ResizeCombobox(ResultUnitCombobox);
 
+            this.PerformConversion();
+
             this.ResumeLayout();
         }
     }

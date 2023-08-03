@@ -25,13 +25,17 @@ namespace e_calc
         public double Result;
         public Func<double[], double> Execute;
 
-        public bool UsesOperands(List<PhysicalQuantityEnum> Quantities)
+        public bool UsesOperands(List<PhysicalQuantityEnum> Quantities, PhysicalQuantityEnum ResultQuantity)
         { 
             foreach(PhysicalQuantityEnum q in Quantities)
             {
                 if (!this.OperandsType.Contains(q))
                     return false;
             }
+
+            if (ResultQuantity != this.ResultType)
+            { return false; }
+
             return true;
         }
 

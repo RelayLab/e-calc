@@ -50,11 +50,22 @@ namespace e_calc
                 this.ResultUnitCombobox.Text);
 
             //запускаем вычисление
-            this.ResultValueTextbox.Text =
+            string Result = 
                 this.MainModel.PerformConversion(
                     Infos,
                     ResultInfo,
                     this.ConversionCombobox.Text);
+
+            if (Result == null) 
+            {
+                this.ResultValueTextbox.Text = "Ошибка!";
+                this.ResultValueTextbox.BackColor = Color.Tomato;
+            }
+            else
+            {
+                this.ResultValueTextbox.Text = Result;
+                this.ResultValueTextbox.BackColor = Color.FromKnownColor(System.Drawing.KnownColor.Control);
+            }
         }
 
     }

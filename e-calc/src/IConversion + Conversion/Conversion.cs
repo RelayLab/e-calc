@@ -46,9 +46,10 @@ namespace e_calc
         /// <returns></returns>
         public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
         {
-            IEnumerable<string> ValuesAsString = Infos.Select(x => x.Value);
-            IEnumerable<double> Values = ValuesAsString.Select(x => Double.Parse(x));
-            IEnumerable<string> Quantities = Infos.Select(x => x.Quantity);
+            IEnumerable<string> ValuesAsString  = Infos.Select(x => x.Value);
+            IEnumerable<double> Values          = ValuesAsString.Select(x => Double.Parse(x));
+            IEnumerable<string> Quantities      = Infos.Select(x => x.Quantity);
+            PhysicalQuantityEnum ResultQuantity = Helper.GetQuantityByString(ResultInfo.Quantity);
 
             List<PhysicalQuantityEnum> QuantitiesAsEnum =
                 Quantities.Select(
@@ -58,23 +59,24 @@ namespace e_calc
             //для заданных в infos величин найти нужную формулу в списке
             foreach (Formula f in this.Formulas)
             {
-                if (f.UsesOperands(QuantitiesAsEnum))
+                if (f.UsesOperands(QuantitiesAsEnum,ResultQuantity))
                 {
                     List<double> SortedValues =
                         f.SortValuesByType(
                             QuantitiesAsEnum,
                             Values.ToList());
 
+                    //преобразовать все значения к одной системе единиц
+                    //вычислить по формуле
+                    //преобразовать результат к нужным единицам, указанным в ResultInfo
                     double Result = f.Execute(
                         SortedValues.ToArray());
                     return Result.ToString();
                 }
 
             }
-            //преобразовать все значения к одной системе единиц
-            //вычислить по формуле
-            //преобразовать результат к нужным единицам, указанным в ResultInfo
-            throw new NotImplementedException();
+            
+            return null;
         }
 
         public List<string> GetDefaultQuantities()

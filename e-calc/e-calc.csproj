@@ -53,12 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Formula.cs" />
-    <Compile Include="src\IConversion + Conversions\Conversion2.cs" />
-    <Compile Include="src\IConversion + Conversions\Conversion1.cs" />
+    <Compile Include="src\IConversion + Conversion\Conversion2.cs" />
+    <Compile Include="src\IConversion + Conversion\Conversion1.cs" />
     <Compile Include="src\Helper\Helper.cs" />
     <Compile Include="src\Helper\QuantitiesAsString.cs" />
-    <Compile Include="src\IConversion + Conversions\Conversion.cs" />
-    <Compile Include="src\IConversion + Conversions\IConversion.cs" />
+    <Compile Include="src\IConversion + Conversion\Conversion.cs" />
+    <Compile Include="src\IConversion + Conversion\IConversion.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\IPhysicalQuantity.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityHeatPower.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityCurrent.cs" />

@@ -204,6 +204,7 @@
             // 
             // ResultValueTextbox
             // 
+            this.ResultValueTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.ResultValueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ResultValueTextbox.Location = new System.Drawing.Point(5, 301);
             this.ResultValueTextbox.Margin = new System.Windows.Forms.Padding(5);
