@@ -10,18 +10,8 @@ namespace e_calc
     /// <summary>
     /// Преобразование "любые величины"
     /// </summary>
-    class Conversion1 : IConversion
+    class Conversion1 : Conversion
     {
-        public string Name { get; }
-        
-        public List<IPhysicalQuantity> Quantities { get; }
-        public List<string> QuantitiesAsString { get; }
-
-        public int OperandsCount { get; }
-
-        public string ConversionInfo { get; }
-        public List<Formula> Formulas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
         public Conversion1()
         {
             OperandsCount = 2;
@@ -39,17 +29,7 @@ namespace e_calc
             ConversionInfo = 
                 "Пример информации о преобразовании. Например, может быть использована формула P = sqrt(3)*Uф*I";
         }
-        public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
-        {
-            return "0";
-            //throw new NotImplementedException();
-        }
-        public List<string> GetDefaultQuantities()
-        {
-            return this.Formulas[0].GetDefaultQuantities();
-        }
     }
-
 }
 
 //    "любые величины",

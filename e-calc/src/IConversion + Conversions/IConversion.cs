@@ -38,12 +38,6 @@ namespace e_calc
         /// </summary>
         string ConversionInfo { get; }
 
-        List<Formula> Formulas { get; set; }
-
-        /// <summary>
-        /// Эта функция выполняет требуемое преобразвание по заданным данным
-        /// </summary>
-        /// <returns></returns>
         string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo);
 
         List<string> GetDefaultQuantities();

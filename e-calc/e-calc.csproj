@@ -57,6 +57,7 @@
     <Compile Include="src\IConversion + Conversions\Conversion1.cs" />
     <Compile Include="src\Helper\Helper.cs" />
     <Compile Include="src\Helper\QuantitiesAsString.cs" />
+    <Compile Include="src\IConversion + Conversions\Conversion.cs" />
     <Compile Include="src\IConversion + Conversions\IConversion.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\IPhysicalQuantity.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityHeatPower.cs" />

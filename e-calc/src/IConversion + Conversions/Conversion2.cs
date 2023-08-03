@@ -11,19 +11,8 @@ namespace e_calc
     /// <summary>
     /// Преобразование "любые величины"
     /// </summary>
-    class Conversion2 : IConversion
+    class Conversion2 : Conversion
     {
-        public string Name { get; }
-        
-        public List<IPhysicalQuantity> Quantities { get; }
-        public List<string> QuantitiesAsString { get; }
-
-        public int OperandsCount { get; }
-
-        public string ConversionInfo { get; }
-
-        public List<Formula> Formulas { get; set; }
-
         public Conversion2()
         {
             OperandsCount = 1;
@@ -58,52 +47,7 @@ namespace e_calc
                     PhysicalQuantityEnum.HeatPower));
 
         }
-
-        public List<string> GetDefaultQuantities()
-        {
-            return this.Formulas[0].GetDefaultQuantities();
-        }
-        public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
-        {
-            IEnumerable<string> ValuesAsString  = Infos.Select(x => x.Value);
-            IEnumerable<double> Values          = ValuesAsString.Select(x => Double.Parse(x));
-            IEnumerable<string> Quantities      = Infos.Select(x => x.Quantity);
-
-            List<PhysicalQuantityEnum> QuantitiesAsEnum = 
-                Quantities.Select(
-                    x => Helper.GetQuantityByString(x)
-                    ).ToList();
-
-            //для заданных в infos величин найти нужную формулу в списке
-            foreach (Formula f in this.Formulas)
-            {
-                if (   f.UsesOperands(QuantitiesAsEnum)   )
-                {
-                    List<double> SortedValues = 
-                        f.SortValuesByType(
-                            QuantitiesAsEnum, 
-                            Values.ToList());
-
-                    double Result = f.Execute(
-                        SortedValues.ToArray());
-                    return Result.ToString();
-                }
-                    
-            }
-            //преобразовать все значения к одной системе единиц
-            //вычислить по формуле
-            //преобразовать результат к нужным единицам, указанным в ResultInfo
-            throw new NotImplementedException();
-        }
-
-        
-
-         
-            //f1.Execute = delegate (double[] x) { return x[0] / x[1]; };
-
-        
     }
-
 }
 
 //    "любые величины",
