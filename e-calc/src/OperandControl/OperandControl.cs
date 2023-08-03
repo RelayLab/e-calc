@@ -32,6 +32,7 @@ namespace e_calc.src
             get 
             { return this.OperandUnitCombobox.Text; } 
         }
+        private readonly List<string> Quantities;
 
         /// <summary>
         /// Конструктор по умолчанию. Здесь ничего не меняем, нужен для работы дизайнера
@@ -52,6 +53,7 @@ namespace e_calc.src
 
             _MainWindow = main_window;
 
+            this.Quantities = QuantitiesAsString;
             //добавляем название для этого элемента "Величина 1,2 ..."
             this.OperandNumber = SequenceNumber + 1;
             this.OperandGroupbox.Text = "Величина " + OperandNumber;
@@ -69,6 +71,11 @@ namespace e_calc.src
 
             this.ResumeLayout();
             //выпадающий список с единицами измерения заполняется в другом событии OperandQuantityCombobox_SelectedIndexChanged
+        }
+
+        public void SelectItem(string item) 
+        {
+            this.OperandQuantityCombobox.SelectedItem = item;
         }
 
 

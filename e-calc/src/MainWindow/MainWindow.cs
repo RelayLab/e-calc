@@ -45,7 +45,6 @@ namespace e_calc
 
 
 
-
     }
 
 

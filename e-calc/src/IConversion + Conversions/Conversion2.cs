@@ -58,6 +58,11 @@ namespace e_calc
                     PhysicalQuantityEnum.HeatPower));
 
         }
+
+        public List<string> GetDefaultQuantities()
+        {
+            return this.Formulas[0].GetDefaultQuantities();
+        }
         public string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo)
         {
             IEnumerable<string> ValuesAsString  = Infos.Select(x => x.Value);

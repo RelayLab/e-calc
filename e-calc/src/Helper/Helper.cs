@@ -78,6 +78,13 @@ namespace e_calc
                 First();
         }
 
+        public static string GetQuantityByEnum(PhysicalQuantityEnum SelectedItem)
+        {
+            return QuantitiesReference.
+                Where(x => x.NameAsEnum == SelectedItem).
+                Select(x => x.Name).
+                First();
+        }
 
 
     }

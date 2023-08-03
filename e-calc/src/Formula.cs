@@ -35,6 +35,17 @@ namespace e_calc
             return true;
         }
 
+        public List<string> GetDefaultQuantities()
+        {
+            List<PhysicalQuantityEnum> OutputList = new List<PhysicalQuantityEnum>();
+            OutputList.AddRange(OperandsType.ToArray());
+            OutputList.Add(ResultType);
+            return 
+                OutputList.
+                Select(x => Helper.GetQuantityByEnum(x)).
+                ToList();
+
+        }
         public List<double> SortValuesByType(
                             List<PhysicalQuantityEnum> Quantities,
                             List<double> Values)

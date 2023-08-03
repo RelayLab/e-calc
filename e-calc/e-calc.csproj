@@ -84,6 +84,10 @@
     <Compile Include="src\Model\ConversionChanged.cs" />
     <Compile Include="src\Model\GetQuantitiesCount.cs" />
     <Compile Include="src\Model\Model.cs" />
+    <Compile Include="src\Model\UpdateUnits.cs" />
+    <Compile Include="src\Model\GetConversionInfo.cs" />
+    <Compile Include="src\Model\GetResultQuantities.cs" />
+    <Compile Include="src\Model\PerformConversion.cs" />
     <Compile Include="src\OperandControl\OperandControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

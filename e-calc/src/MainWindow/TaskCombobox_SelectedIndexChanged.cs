@@ -37,14 +37,25 @@ namespace e_calc
                 OperandsPanel.Controls.Add(oc);
             }
 
-
-
             ResultQuantityCombobox.Items.Clear();
             
             ResultQuantityCombobox.Items.AddRange(
                 this.MainModel.GetResultQuantities(ActiveConversion).ToArray());
             ResultQuantityCombobox.SelectedIndex = 0;
             Helper.ResizeCombobox(ResultQuantityCombobox);
+
+            //записать в комбобоксы величины, которые используются например в первой формуле
+            //чтобы сразу на экране был какой-то результат
+            List<string> DefaultQuantities = this.MainModel.GetDefaultQuantities(ActiveConversion);
+            int j = 0;
+            foreach(OperandControl oc in this.OperandsPanel.Controls)
+            {
+                oc.SelectItem(DefaultQuantities[j]);
+                j++;
+            }
+            ResultQuantityCombobox.SelectedItem = DefaultQuantities.Last();
+            
+
 
             InfoTextbox.Text = MainModel.GetConversionInfo(ActiveConversion);
 

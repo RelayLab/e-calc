@@ -38,5 +38,11 @@ namespace e_calc.src
 
             this.ResumeLayout();
         }
+
+        private string SelectedItem;
+        public void RemoveQuantityFromCombobox(string Quantity)
+        {
+            this.OperandQuantityCombobox.Items.Remove(Quantity);
+        }
     }
 }

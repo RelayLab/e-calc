@@ -45,6 +45,8 @@ namespace e_calc
         /// </summary>
         /// <returns></returns>
         string PerformConversion(List<OperandInfo> Infos, OperandInfo ResultInfo);
+
+        List<string> GetDefaultQuantities();
     }
 
 }

@@ -44,6 +44,10 @@ namespace e_calc
             return "0";
             //throw new NotImplementedException();
         }
+        public List<string> GetDefaultQuantities()
+        {
+            return this.Formulas[0].GetDefaultQuantities();
+        }
     }
 
 }
