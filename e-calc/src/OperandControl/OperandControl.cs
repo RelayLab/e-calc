@@ -71,35 +71,7 @@ namespace e_calc.src
             //выпадающий список с единицами измерения заполняется в другом событии OperandQuantityCombobox_SelectedIndexChanged
         }
 
-        private void OperandUnitCombobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this._MainWindow.PerformConversion();
-        }
 
-        private string PrevText;
-        private int PrevCursorPosition;
-        private void OperandValueTextbox_TextChanged(object sender, EventArgs e)
-        {
-            if (this.OperandValueTextbox.Text == "")
-                return;
 
-            PrevCursorPosition = this.OperandValueTextbox.SelectionStart;
-
-            bool IsSuccess = Double.TryParse(this.OperandValueTextbox.Text, out double result);
-            if (IsSuccess)
-            {
-                PrevText = this.OperandValueTextbox.Text;
-                this._MainWindow.PerformConversion(); 
-            }
-            else
-            {
-                this.OperandValueTextbox.TextChanged -= OperandValueTextbox_TextChanged;
-                this.OperandValueTextbox.Text = PrevText;
-                this.OperandValueTextbox.SelectionStart = PrevCursorPosition-1;
-                this.OperandValueTextbox.TextChanged += OperandValueTextbox_TextChanged;
-            }
-                
-            
-        }
     }
 }

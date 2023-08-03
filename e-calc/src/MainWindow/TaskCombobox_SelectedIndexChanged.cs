@@ -52,16 +52,7 @@ namespace e_calc
             this.ResumeLayout();
         }
 
-        /// <summary>
-        /// Эта функция для заданной физической величины обновляет список единиц измерения из модели
-        /// </summary>
-        /// <param name="SelectedItem"></param>
-        /// <returns></returns>
-        public List<string> UpdateUnits(string SelectedItem)
-        {
-            return this.MainModel.UpdateUnits(SelectedItem);
 
-        }
 
     }
 }

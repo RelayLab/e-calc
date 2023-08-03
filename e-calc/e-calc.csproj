@@ -63,11 +63,20 @@
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityCurrent.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityActivePower.cs" />
     <Compile Include="src\Helper\ResizeCombobox.cs" />
+    <Compile Include="src\MainWindow\UpdateUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MainWindow\ResultQuantityCombobox_SelectedIndexChanged.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="src\MainWindow\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\MainWindow\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MainWindow\PerformConversion.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\MainWindow\TaskCombobox_SelectedIndexChanged.cs">
       <SubType>Form</SubType>
@@ -84,6 +93,13 @@
     <Compile Include="src\OperandControl\OperandQuantityCombobox_SelectedIndexChanged.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="src\OperandControl\OperandUnitCombobox_SelectedIndexChanged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\OperandControl\OperandValueTextbox_TextChanged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\OperandInfo.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\IPhysicalQuantity + Quantities\QuantityVoltage.cs" />
