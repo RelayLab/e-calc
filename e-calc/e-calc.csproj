@@ -52,17 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\PhysicalQuantityEnum.cs" />
     <Compile Include="src\Formula.cs" />
-    <Compile Include="src\IConversion + Conversion\Conversion2.cs" />
-    <Compile Include="src\IConversion + Conversion\Conversion1.cs" />
+    <Compile Include="src\Conversion\PerformConversion.cs" />
+    <Compile Include="src\Conversion\Conversion2.cs" />
+    <Compile Include="src\Conversion\Conversion1.cs" />
     <Compile Include="src\Helper\Helper.cs" />
     <Compile Include="src\Helper\QuantitiesAsString.cs" />
-    <Compile Include="src\IConversion + Conversion\Conversion.cs" />
-    <Compile Include="src\IConversion + Conversion\IConversion.cs" />
-    <Compile Include="src\IPhysicalQuantity + Quantities\IPhysicalQuantity.cs" />
-    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityHeatPower.cs" />
-    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityCurrent.cs" />
-    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityActivePower.cs" />
+    <Compile Include="src\Conversion\Conversion.cs" />
+    <Compile Include="src\Conversion\IConversion.cs" />
+    <Compile Include="src\PhysicalQuantity\IPhysicalQuantity.cs" />
+    <Compile Include="src\PhysicalQuantity\PhysicalQuantity.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityHeatPower.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityCurrent.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityActivePower.cs" />
     <Compile Include="src\Helper\ResizeCombobox.cs" />
     <Compile Include="src\MainWindow\UpdateUnits.cs">
       <SubType>Form</SubType>
@@ -107,7 +110,9 @@
     <Compile Include="src\OperandInfo.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\IPhysicalQuantity + Quantities\QuantityVoltage.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityVoltage.cs" />
+    <Compile Include="src\Unit.cs" />
+    <Compile Include="src\UnitsEnum.cs" />
     <EmbeddedResource Include="src\MainWindow\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,9 +23,6 @@ namespace e_calc
                 new QuantityActivePower()
             };
 
-            QuantitiesAsString = 
-                Quantities.Select(x => x.Name).ToList();
-
             ConversionInfo = 
                 "Пример информации о преобразовании. Например, может быть использована формула P = sqrt(3)*Uф*I";
         }

@@ -175,6 +175,7 @@
             this.ResultUnitCombobox.Name = "ResultUnitCombobox";
             this.ResultUnitCombobox.Size = new System.Drawing.Size(171, 29);
             this.ResultUnitCombobox.TabIndex = 1;
+            this.ResultUnitCombobox.SelectedIndexChanged += new System.EventHandler(this.ResultUnitCombobox_SelectedIndexChanged);
             // 
             // label7
             // 

@@ -29,7 +29,7 @@ namespace e_calc
         /// <summary>
         /// Единицы измерения (мВ, В, кВ и т.п.)
         /// </summary>
-        readonly string Unit;
+        public readonly string Unit;
 
         public OperandInfo(int sequenceNumber, string quantity, string value, string unit)
         {

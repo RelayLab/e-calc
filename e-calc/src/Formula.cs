@@ -46,7 +46,7 @@ namespace e_calc
             OutputList.Add(ResultType);
             return 
                 OutputList.
-                Select(x => Helper.GetQuantityByEnum(x)).
+                Select(x => Helper.GetQuantityStringByEnum(x)).
                 ToList();
 
         }

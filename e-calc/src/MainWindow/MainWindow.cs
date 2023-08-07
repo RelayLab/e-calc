@@ -42,9 +42,10 @@ namespace e_calc
             //дальнейшая инициализация происходит через функцию обновления этого комбобокса ConversionCombobox_SelectedIndexChanged
         }
 
-
-
-
+        private void ResultUnitCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.PerformConversion();
+        }
     }
 
 

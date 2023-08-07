@@ -7,29 +7,6 @@ using System.Threading.Tasks;
 
 namespace e_calc
 {
-    /// <summary>
-    /// Все основные типы используемых величин.
-    /// ДОЛЖНО СОВПАДАТЬ С Helper.QuantitiesReference
-    /// </summary>
-    enum PhysicalQuantityEnum 
-    {
-        Voltage, 
-        Current, 
-        ActivePower, 
-        HeatPower,
-        Energy 
-    };
-
-    enum Units 
-    { 
-        V, 
-        kV, 
-        A, 
-        kA,
-        W, 
-        kW, 
-        MW
-    };
 
     /// <summary>
     /// Вспомогательный класс, который содержит некоторые общие методы для разных классов, например, доступ к строковому значению по заданному enum 
@@ -50,27 +27,23 @@ namespace e_calc
             //new QuantityEnergy()
         };
 
-        //{ UnitsCurrent.A,     "А"       },
-        //{ UnitsCurrent.kA,    "кА"      }
-        //{ UnitsActivePower.W,     "Вт"       },
-        //{ UnitsActivePower.kW,    "кВт"      },
-        //{ UnitsActivePower.MW,    "МВт"      }
 
+        
 
         /// <summary>
         /// Эта функция возвращает список единиц измерения физической величины по заданной строке
         /// </summary>
         /// <param name="SelectedItem">тип в формате строки</param>
         /// <returns>список единиц измерения физической величины </returns>
-        public static List<string> GetUnitsByString(string SelectedItem)
+        public static List<string> GetUnitsByQuantity(string SelectedItem)
         {
             return QuantitiesReference.
                 Where(x => x.Name == SelectedItem).
-                Select(x => x.Units).
+                Select(x => x.UnitsAsString).
                 First();
         }
 
-        public static PhysicalQuantityEnum GetQuantityByString(string SelectedItem)
+        public static PhysicalQuantityEnum GetQuantityEnumByString(string SelectedItem)
         {
             return QuantitiesReference.
                 Where(x => x.Name == SelectedItem).
@@ -78,7 +51,7 @@ namespace e_calc
                 First();
         }
 
-        public static string GetQuantityByEnum(PhysicalQuantityEnum SelectedItem)
+        public static string GetQuantityStringByEnum(PhysicalQuantityEnum SelectedItem)
         {
             return QuantitiesReference.
                 Where(x => x.NameAsEnum == SelectedItem).
@@ -86,6 +59,17 @@ namespace e_calc
                 First();
         }
 
+        public static double NormalizeQuantity(PhysicalQuantityEnum q, double v, string u)
+        {
+            return QuantitiesReference.
+                Where(x => x.NameAsEnum == q).Select(x => x.Normalize(v, u)).First();
+        }
+
+        public static double ReverseQuantity(PhysicalQuantityEnum q, double v, string u)
+        {
+            return QuantitiesReference.
+                Where(x => x.NameAsEnum == q).Select(x => x.Reverse(v, u)).First();
+        }
 
     }
 

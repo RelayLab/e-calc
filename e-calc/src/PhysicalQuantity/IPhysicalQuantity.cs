@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace e_calc
 {
@@ -24,10 +19,14 @@ namespace e_calc
         /// <summary>
         /// Список единиц измерения (должен биться с UnitsAsEnum! ) в виде строк для этой физ. величины ("В", "кВ")
         /// </summary>
-        List<string> Units { get; }
+        List<string> UnitsAsString { get; }
         /// <summary>
         /// Список единиц измерения для использования в коде (enum)
         /// </summary>
-        List<Units> UnitsAsEnum { get; }
+        List<UnitsEnum> UnitsAsEnum { get; }
+
+        double Normalize(double v, string u);
+
+        double Reverse(double v, string u);
     }
 }
