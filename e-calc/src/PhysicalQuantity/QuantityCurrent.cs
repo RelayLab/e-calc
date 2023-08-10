@@ -15,8 +15,8 @@ namespace e_calc
 
             Units = new List<Unit>()
             {
-                new Unit(   "А",    UnitsEnum.A,   1),
-                new Unit(   "кА",   UnitsEnum.kA,  1e3)
+                new Unit(   "А",    UnitsEnum.A,   1, 0),
+                new Unit(   "кА",   UnitsEnum.kA,  1e3, 0)
             };
         }
     }

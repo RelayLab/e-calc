@@ -7,13 +7,15 @@
     {
         public string AsString { get; private set; }
         public UnitsEnum AsEnum { get; private set; }
-        public double NormKoef { get; private set; }
+        public double MulKoef { get; private set; }
+        public double AddKoef { get; private set; }
 
-        public Unit(string asString, UnitsEnum asEnum, double normKoef)
+        public Unit(string asString, UnitsEnum asEnum, double mulKoef,double addKoef)
         {
             AsString = asString;
             AsEnum = asEnum;
-            NormKoef = normKoef;
+            MulKoef = mulKoef;
+            AddKoef = addKoef;
         }
 
     }

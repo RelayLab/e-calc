@@ -10,6 +10,6 @@ namespace e_calc
     partial class Model
     {
         public List<string> UpdateUnits(string Quantity)
-        { return Helper.GetUnitsByQuantity(Quantity); }
+        { return PhysicalQuantity.GetUnitsByQuantity(Quantity); }
     }
 }

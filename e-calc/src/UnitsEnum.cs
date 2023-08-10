@@ -5,6 +5,7 @@
         mV, V, kV,
         mA, A, kA,
         W, kW, MW,
-        cal,kcal,Mcal,Gcal
+        cal,kcal,Mcal,Gcal,
+        C, F, K
     };
 }

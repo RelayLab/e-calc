@@ -1,42 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace e_calc
 {
-    class Formula
+    internal class Formula
     {
         public Formula(
             Func<double[], double> execute,
             PhysicalQuantityEnum resultType,
             params PhysicalQuantityEnum[] operandsType)
         {
-            this.OperandsType = operandsType.ToList();
-            this.ResultType = resultType;
-            this.Execute = execute;
+            OperandsType = operandsType.ToList();
+            ResultType = resultType;
+            Execute = execute;
         }
-        List<PhysicalQuantityEnum> OperandsType;
-        PhysicalQuantityEnum ResultType;
+
+        private readonly List<PhysicalQuantityEnum> OperandsType;
+        private readonly PhysicalQuantityEnum ResultType;
         public List<double> Values;
         public double Result;
         public Func<double[], double> Execute;
 
         public bool UsesOperands(List<PhysicalQuantityEnum> Quantities, PhysicalQuantityEnum ResultQuantity)
-        { 
-            foreach(PhysicalQuantityEnum q in Quantities)
+        {
+            foreach (PhysicalQuantityEnum q in Quantities)
             {
-                if (!this.OperandsType.Contains(q))
+                if (!OperandsType.Contains(q))
+                {
                     return false;
+                }
             }
 
-            if (ResultQuantity != this.ResultType)
-            { return false; }
-
-            return true;
+            return ResultQuantity == ResultType;
         }
 
         public List<string> GetDefaultQuantities()
@@ -44,9 +40,9 @@ namespace e_calc
             List<PhysicalQuantityEnum> OutputList = new List<PhysicalQuantityEnum>();
             OutputList.AddRange(OperandsType.ToArray());
             OutputList.Add(ResultType);
-            return 
+            return
                 OutputList.
-                Select(x => Helper.GetQuantityStringByEnum(x)).
+                Select(x => PhysicalQuantity.GetQuantityStringByEnum(x)).
                 ToList();
 
         }
@@ -56,7 +52,7 @@ namespace e_calc
         {
             List<double> SortedValues = new List<double>();
 
-            foreach(PhysicalQuantityEnum q1 in this.OperandsType)
+            foreach (PhysicalQuantityEnum q1 in OperandsType)
             {
                 int i = 0;
                 foreach (PhysicalQuantityEnum q2 in Quantities)
@@ -67,7 +63,7 @@ namespace e_calc
                 }
             }
 
-            return SortedValues; 
+            return SortedValues;
         }
     }
 }

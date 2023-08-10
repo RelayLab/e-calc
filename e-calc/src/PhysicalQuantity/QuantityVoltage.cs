@@ -14,9 +14,9 @@ namespace e_calc
 
             Units = new List<Unit>()
             {
-                new Unit(   "мВ",   UnitsEnum.mV,   0.001),
-                new Unit(   "В" ,   UnitsEnum.V,    1),
-                new Unit(   "кВ",   UnitsEnum.kV,   1000)
+                new Unit(   "мВ",   UnitsEnum.mV,   0.001, 0),
+                new Unit(   "В" ,   UnitsEnum.V,    1, 0),
+                new Unit(   "кВ",   UnitsEnum.kV,   1000,0)
             };
         }
 

@@ -21,11 +21,11 @@ namespace e_calc
             List<double> Values          = ValuesAsString.Select(x => Double.Parse(x)).ToList();
             List<string> Quantities      = Infos.Select(x => x.Quantity).ToList();
             List<string> Units           = Infos.Select(x => x.Unit).ToList();
-            PhysicalQuantityEnum ResultQuantity = Helper.GetQuantityEnumByString(ResultInfo.Quantity);
+            PhysicalQuantityEnum ResultQuantity = PhysicalQuantity.GetQuantityEnumByString(ResultInfo.Quantity);
 
             List<PhysicalQuantityEnum> QuantitiesAsEnum =
                 Quantities.Select(
-                    x => Helper.GetQuantityEnumByString(x)
+                    x => PhysicalQuantity.GetQuantityEnumByString(x)
                     ).ToList();
 
             //для заданных в infos величин найти нужную формулу в списке

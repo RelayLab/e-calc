@@ -47,7 +47,7 @@ namespace e_calc
 
             for (int i = 0; i < QuantitiesAsEnum.Count; i++)
             {
-                double val = Helper.NormalizeQuantity(
+                double val = PhysicalQuantity.NormalizeQuantity(
                     QuantitiesAsEnum[i],
                     Values[i],
                     Units[i]);
@@ -59,7 +59,7 @@ namespace e_calc
 
         public double ReverseUnit(PhysicalQuantityEnum QuantityAsEnum, double Value, string Unit)
         {
-            return Helper.ReverseQuantity(
+            return PhysicalQuantity.ReverseQuantity(
                     QuantityAsEnum,
                     Value,
                     Unit);

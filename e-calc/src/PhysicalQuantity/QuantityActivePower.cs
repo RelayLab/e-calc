@@ -13,10 +13,10 @@ namespace e_calc
             NameAsEnum = PhysicalQuantityEnum.ActivePower;
             Units = new List<Unit>()
             {
-                new Unit(   "Вт",    UnitsEnum.A,   1),
-                new Unit(   "кВт",   UnitsEnum.kA,  1e3),
-                new Unit(   "МВт",   UnitsEnum.kA,  1e6),
-                new Unit(   "ГВт",   UnitsEnum.kA,  1e9)
+                new Unit(   "Вт",    UnitsEnum.A,   1, 0),
+                new Unit(   "кВт",   UnitsEnum.kA,  1e3, 0),
+                new Unit(   "МВт",   UnitsEnum.kA,  1e6, 0),
+                new Unit(   "ГВт",   UnitsEnum.kA,  1e9, 0)
             };
         }
 

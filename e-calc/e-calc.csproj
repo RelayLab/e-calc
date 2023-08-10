@@ -52,17 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Conversion\Conversion3.cs" />
     <Compile Include="src\PhysicalQuantityEnum.cs" />
     <Compile Include="src\Formula.cs" />
     <Compile Include="src\Conversion\PerformConversion.cs" />
     <Compile Include="src\Conversion\Conversion2.cs" />
     <Compile Include="src\Conversion\Conversion1.cs" />
-    <Compile Include="src\Helper\Helper.cs" />
-    <Compile Include="src\Helper\QuantitiesAsString.cs" />
+    <Compile Include="src\QuantitiesReferenceSingleton.cs" />
     <Compile Include="src\Conversion\Conversion.cs" />
     <Compile Include="src\Conversion\IConversion.cs" />
     <Compile Include="src\PhysicalQuantity\IPhysicalQuantity.cs" />
     <Compile Include="src\PhysicalQuantity\PhysicalQuantity.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityTemperature.cs" />
     <Compile Include="src\PhysicalQuantity\QuantityHeatPower.cs" />
     <Compile Include="src\PhysicalQuantity\QuantityCurrent.cs" />
     <Compile Include="src\PhysicalQuantity\QuantityActivePower.cs" />

@@ -10,6 +10,7 @@
         Current,
         ActivePower,
         HeatPower,
+        Temperature,
         Energy
     };
 }

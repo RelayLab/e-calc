@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace e_calc
 {
-    partial class Helper
+    internal  class Helper
     {
 
         /// <summary>

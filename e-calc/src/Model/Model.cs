@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace e_calc
 {
@@ -12,7 +8,7 @@ namespace e_calc
     /// </summary>
     public partial class Model
     {
-        public readonly List<String> ConversionsAsString;
+        public readonly List<string> ConversionsAsString;
         private readonly List<IConversion> ConversionsReference;
 
         /// <summary>
@@ -20,22 +16,25 @@ namespace e_calc
         /// </summary>
         public Model()
         {
-            IConversion c1 = new Conversion1();
-            IConversion c2 = new Conversion2();
-            ConversionsReference = new List<IConversion> { c2, c1 };
-            this.ConversionsAsString = ConversionsReference.Select(x => x.Name).ToList();
+            ConversionsReference = new List<IConversion>
+            {
+                new Conversion3(),
+                new Conversion2(),
+                new Conversion1()
+            };
+            ConversionsAsString = ConversionsReference.Select(x => x.Name).ToList();
 
             ///Список задач, которые может решать программа
         }
 
         public List<string> GetDefaultQuantities(string ActiveConversion)
         {
-            IConversion conv = this.GetConversionByString(ActiveConversion);
+            IConversion conv = GetConversionByString(ActiveConversion);
             return conv.GetDefaultQuantities();
         }
-        private IConversion GetConversionByString (string ActiveConversion)
+        private IConversion GetConversionByString(string ActiveConversion)
         {
-            return this.ConversionsReference.
+            return ConversionsReference.
                 Where(x => x.Name == ActiveConversion).
                 First();
         }
