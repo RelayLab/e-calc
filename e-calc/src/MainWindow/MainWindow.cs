@@ -46,6 +46,12 @@ namespace e_calc
         {
             this.PerformConversion();
         }
+
+        bool IsShown = false;
+        private void MainWindow_Shown(object sender, EventArgs e)
+        {
+            IsShown = true;
+        }
     }
 
 

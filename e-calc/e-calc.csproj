@@ -52,12 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Conversion\Conversion4.cs" />
     <Compile Include="src\Conversion\Conversion3.cs" />
     <Compile Include="src\PhysicalQuantityEnum.cs" />
     <Compile Include="src\Formula.cs" />
     <Compile Include="src\Conversion\PerformConversion.cs" />
     <Compile Include="src\Conversion\Conversion2.cs" />
     <Compile Include="src\Conversion\Conversion1.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityEnergy.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityTime.cs" />
     <Compile Include="src\QuantitiesReferenceSingleton.cs" />
     <Compile Include="src\Conversion\Conversion.cs" />
     <Compile Include="src\Conversion\IConversion.cs" />

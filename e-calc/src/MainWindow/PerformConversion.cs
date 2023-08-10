@@ -20,14 +20,20 @@ namespace e_calc
         {
             //проверяем, что во всех окнах введены данные
 
+            if (!IsShown)
+                return;
+
             if (this.OperandsPanel.Controls.Count == 0)
                 return;
 
             foreach (OperandControl oc in this.OperandsPanel.Controls)
             {
                 if (oc.Value == "" || oc.Value == null)
-                { return; }
+                    return;
             }
+            if (this.ResultValueTextbox.Text == "" || this.ResultValueTextbox.Text == null)
+                return;
+
             //сведения обо всех введенных на экранах величинах кладём в список
             List<OperandInfo> Infos = new List<OperandInfo>();
             int i = 0;

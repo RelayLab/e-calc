@@ -5,7 +5,10 @@
         mV, V, kV,
         mA, A, kA,
         W, kW, MW,
+        J, kJ, MJ, GJ,
         cal,kcal,Mcal,Gcal,
-        C, F, K
+        cal_h, kcal_h, Mcal_h, Gcal_h,
+        C, F, K,
+        second,minute,hour,day
     };
 }

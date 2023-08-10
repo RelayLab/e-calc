@@ -265,6 +265,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "MainWindow";
             this.Text = "e-calc - ЭнергоКалькулятор";
+            this.Shown += new System.EventHandler(this.MainWindow_Shown);
             this.MainWindowTable.ResumeLayout(false);
             this.MainWindowTable.PerformLayout();
             this.OperandsPanel.ResumeLayout(false);

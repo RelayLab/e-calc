@@ -11,6 +11,7 @@
         ActivePower,
         HeatPower,
         Temperature,
+        Time,
         Energy
     };
 }
