@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Conversion\Conversion5.cs" />
     <Compile Include="src\Conversion\Conversion4.cs" />
     <Compile Include="src\Conversion\Conversion3.cs" />
     <Compile Include="src\PhysicalQuantityEnum.cs" />
@@ -59,6 +60,9 @@
     <Compile Include="src\Conversion\PerformConversion.cs" />
     <Compile Include="src\Conversion\Conversion2.cs" />
     <Compile Include="src\Conversion\Conversion1.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityPowerFactor.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityComplexPower.cs" />
+    <Compile Include="src\PhysicalQuantity\QuantityReactivePower.cs" />
     <Compile Include="src\PhysicalQuantity\QuantityEnergy.cs" />
     <Compile Include="src\PhysicalQuantity\QuantityTime.cs" />
     <Compile Include="src\QuantitiesReferenceSingleton.cs" />

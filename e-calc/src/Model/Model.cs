@@ -18,6 +18,7 @@ namespace e_calc
         {
             ConversionsReference = new List<IConversion>
             {
+                new Conversion5(),
                 new Conversion4(),
                 new Conversion3(),
                 new Conversion2(),
