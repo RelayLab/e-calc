@@ -38,14 +38,6 @@ namespace e_calc
 
             Formulas.Add(
                 new Formula(
-                    x => x[0] * x[1],
-                    PhysicalQuantityEnum.Energy,
-                    PhysicalQuantityEnum.Time,
-                    PhysicalQuantityEnum.ActivePower
-                    ));
-
-            Formulas.Add(
-                new Formula(
                     x => x[0] / x[1],
                     PhysicalQuantityEnum.ActivePower,
                     PhysicalQuantityEnum.Energy,
@@ -54,27 +46,12 @@ namespace e_calc
 
             Formulas.Add(
                 new Formula(
-                    x => x[1] / x[0],
-                    PhysicalQuantityEnum.ActivePower,
-                    PhysicalQuantityEnum.Time,
-                    PhysicalQuantityEnum.Energy
-                    ));
-
-            Formulas.Add(
-                new Formula(
                     x => x[0] / x[1],
                     PhysicalQuantityEnum.Time,
                     PhysicalQuantityEnum.Energy,
                     PhysicalQuantityEnum.ActivePower
                     ));
 
-            Formulas.Add(
-                new Formula(
-                    x => x[1] / x[0],
-                    PhysicalQuantityEnum.Time,
-                    PhysicalQuantityEnum.ActivePower,
-                    PhysicalQuantityEnum.Energy
-                    ));
         }
     }
 }
