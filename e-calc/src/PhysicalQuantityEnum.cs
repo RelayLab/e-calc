@@ -12,9 +12,13 @@
         ReactivePower,
         ComplexPower,
         PowerFactor,
+        PowerFactorSin,
+        PowerFactorTg,
         HeatPower,
         Temperature,
         Time,
-        Energy
+        Energy,
+        Resistance,
+        Reactance
     };
 }

@@ -2,8 +2,9 @@
 {
     enum UnitsEnum
     {
-        mV, V, kV,
-        mA, A, kA,
+        V, kV,
+        A, kA,
+        Ohm,kOhm,MOhm,
         W, kW, MW, GW,
         var, kvar, Mvar,
         VA,kVA,MVA,

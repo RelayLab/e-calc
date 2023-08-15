@@ -70,7 +70,7 @@ namespace e_calc
             else
             {
                 this.ResultValueTextbox.Text = Result;
-                this.ResultValueTextbox.BackColor = Color.FromKnownColor(System.Drawing.KnownColor.Control);
+                this.ResultValueTextbox.BackColor = Color.FromKnownColor(System.Drawing.KnownColor.ControlLight);
             }
         }
 

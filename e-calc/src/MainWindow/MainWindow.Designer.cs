@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ResultQuantityCombobox = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.ResultUnitCombobox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.InfoTextbox = new System.Windows.Forms.RichTextBox();
@@ -51,6 +50,7 @@
             // 
             this.MainWindowTable.AutoSize = true;
             this.MainWindowTable.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MainWindowTable.BackColor = System.Drawing.SystemColors.Window;
             this.MainWindowTable.ColumnCount = 2;
             this.MainWindowTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -59,7 +59,6 @@
             this.MainWindowTable.Controls.Add(this.label2, 0, 2);
             this.MainWindowTable.Controls.Add(this.label5, 0, 4);
             this.MainWindowTable.Controls.Add(this.ResultQuantityCombobox, 0, 5);
-            this.MainWindowTable.Controls.Add(this.label8, 0, 6);
             this.MainWindowTable.Controls.Add(this.ResultUnitCombobox, 1, 7);
             this.MainWindowTable.Controls.Add(this.label7, 0, 8);
             this.MainWindowTable.Controls.Add(this.InfoTextbox, 0, 9);
@@ -79,7 +78,7 @@
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTable.Size = new System.Drawing.Size(660, 464);
+            this.MainWindowTable.Size = new System.Drawing.Size(652, 394);
             this.MainWindowTable.TabIndex = 0;
             // 
             // label1
@@ -88,6 +87,7 @@
             this.label1.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label1, 2);
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -100,8 +100,8 @@
             this.MainWindowTable.SetColumnSpan(this.ConversionCombobox, 2);
             this.ConversionCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ConversionCombobox.FormattingEnabled = true;
-            this.ConversionCombobox.Location = new System.Drawing.Point(4, 25);
-            this.ConversionCombobox.Margin = new System.Windows.Forms.Padding(4);
+            this.ConversionCombobox.Location = new System.Drawing.Point(7, 25);
+            this.ConversionCombobox.Margin = new System.Windows.Forms.Padding(7, 4, 4, 4);
             this.ConversionCombobox.Name = "ConversionCombobox";
             this.ConversionCombobox.Size = new System.Drawing.Size(363, 29);
             this.ConversionCombobox.TabIndex = 1;
@@ -113,6 +113,7 @@
             this.label2.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label2, 2);
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(4, 63);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
             this.label2.Name = "label2";
@@ -126,7 +127,8 @@
             this.label5.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label5, 2);
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(4, 210);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(4, 213);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 21);
@@ -135,43 +137,31 @@
             // 
             // ResultQuantityCombobox
             // 
-            this.MainWindowTable.SetColumnSpan(this.ResultQuantityCombobox, 2);
             this.ResultQuantityCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ResultQuantityCombobox.FormattingEnabled = true;
             this.ResultQuantityCombobox.Items.AddRange(new object[] {
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.ResultQuantityCombobox.Location = new System.Drawing.Point(5, 236);
-            this.ResultQuantityCombobox.Margin = new System.Windows.Forms.Padding(5);
+            this.ResultQuantityCombobox.Location = new System.Drawing.Point(7, 239);
+            this.ResultQuantityCombobox.Margin = new System.Windows.Forms.Padding(7, 5, 5, 5);
+            this.ResultQuantityCombobox.MinimumSize = new System.Drawing.Size(40, 0);
             this.ResultQuantityCombobox.Name = "ResultQuantityCombobox";
             this.ResultQuantityCombobox.Size = new System.Drawing.Size(171, 29);
             this.ResultQuantityCombobox.TabIndex = 1;
             this.ResultQuantityCombobox.SelectedIndexChanged += new System.EventHandler(this.ResultQuantityCombobox_SelectedIndexChanged);
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.MainWindowTable.SetColumnSpan(this.label8, 2);
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(4, 275);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Ответ:";
-            // 
             // ResultUnitCombobox
             // 
+            this.ResultUnitCombobox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ResultUnitCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ResultUnitCombobox.FormattingEnabled = true;
             this.ResultUnitCombobox.Items.AddRange(new object[] {
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.ResultUnitCombobox.Location = new System.Drawing.Point(188, 301);
-            this.ResultUnitCombobox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 7);
+            this.ResultUnitCombobox.Location = new System.Drawing.Point(185, 282);
+            this.ResultUnitCombobox.Margin = new System.Windows.Forms.Padding(0, 3, 5, 5);
             this.ResultUnitCombobox.Name = "ResultUnitCombobox";
             this.ResultUnitCombobox.Size = new System.Drawing.Size(171, 29);
             this.ResultUnitCombobox.TabIndex = 1;
@@ -183,7 +173,8 @@
             this.label7.AutoSize = true;
             this.MainWindowTable.SetColumnSpan(this.label7, 2);
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(4, 337);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(4, 315);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 21);
@@ -195,20 +186,26 @@
             this.InfoTextbox.BackColor = System.Drawing.SystemColors.Window;
             this.InfoTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MainWindowTable.SetColumnSpan(this.InfoTextbox, 2);
+            this.InfoTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InfoTextbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.InfoTextbox.Location = new System.Drawing.Point(3, 361);
+            this.InfoTextbox.Location = new System.Drawing.Point(7, 341);
+            this.InfoTextbox.Margin = new System.Windows.Forms.Padding(7, 5, 3, 3);
+            this.InfoTextbox.MinimumSize = new System.Drawing.Size(500, 50);
             this.InfoTextbox.Name = "InfoTextbox";
             this.InfoTextbox.ReadOnly = true;
-            this.InfoTextbox.Size = new System.Drawing.Size(654, 100);
+            this.InfoTextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.InfoTextbox.Size = new System.Drawing.Size(642, 50);
             this.InfoTextbox.TabIndex = 2;
             this.InfoTextbox.Text = "S = \\/3 U I";
+            this.InfoTextbox.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.InfoTextbox_ContentsResized);
             // 
             // ResultValueTextbox
             // 
-            this.ResultValueTextbox.BackColor = System.Drawing.SystemColors.Control;
+            this.ResultValueTextbox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ResultValueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ResultValueTextbox.Location = new System.Drawing.Point(5, 301);
-            this.ResultValueTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.ResultValueTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ResultValueTextbox.Location = new System.Drawing.Point(7, 283);
+            this.ResultValueTextbox.Margin = new System.Windows.Forms.Padding(7, 10, 5, 5);
             this.ResultValueTextbox.Name = "ResultValueTextbox";
             this.ResultValueTextbox.ReadOnly = true;
             this.ResultValueTextbox.Size = new System.Drawing.Size(173, 27);
@@ -222,9 +219,10 @@
             this.MainWindowTable.SetColumnSpan(this.OperandsPanel, 2);
             this.OperandsPanel.Controls.Add(this.operandControl2);
             this.OperandsPanel.Controls.Add(this.operandControl1);
-            this.OperandsPanel.Location = new System.Drawing.Point(3, 87);
+            this.OperandsPanel.Location = new System.Drawing.Point(1, 87);
+            this.OperandsPanel.Margin = new System.Windows.Forms.Padding(1, 3, 3, 1);
             this.OperandsPanel.Name = "OperandsPanel";
-            this.OperandsPanel.Size = new System.Drawing.Size(654, 120);
+            this.OperandsPanel.Size = new System.Drawing.Size(642, 125);
             this.OperandsPanel.TabIndex = 3;
             // 
             // operandControl2
@@ -236,7 +234,7 @@
             this.operandControl2.Location = new System.Drawing.Point(5, 5);
             this.operandControl2.Margin = new System.Windows.Forms.Padding(5);
             this.operandControl2.Name = "operandControl2";
-            this.operandControl2.Size = new System.Drawing.Size(317, 110);
+            this.operandControl2.Size = new System.Drawing.Size(311, 115);
             this.operandControl2.TabIndex = 1;
             // 
             // operandControl1
@@ -245,10 +243,10 @@
             this.operandControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.operandControl1.BackColor = System.Drawing.SystemColors.Window;
             this.operandControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.operandControl1.Location = new System.Drawing.Point(332, 5);
+            this.operandControl1.Location = new System.Drawing.Point(326, 5);
             this.operandControl1.Margin = new System.Windows.Forms.Padding(5);
             this.operandControl1.Name = "operandControl1";
-            this.operandControl1.Size = new System.Drawing.Size(317, 110);
+            this.operandControl1.Size = new System.Drawing.Size(311, 115);
             this.operandControl1.TabIndex = 0;
             // 
             // MainWindow
@@ -284,7 +282,6 @@
         private System.Windows.Forms.ComboBox ResultQuantityCombobox;
         private System.Windows.Forms.ComboBox ConversionCombobox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox InfoTextbox;
         private System.Windows.Forms.ComboBox ResultUnitCombobox;
         private System.Windows.Forms.TextBox ResultValueTextbox;

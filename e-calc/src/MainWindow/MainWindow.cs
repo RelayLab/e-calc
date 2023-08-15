@@ -52,6 +52,11 @@ namespace e_calc
         {
             IsShown = true;
         }
+
+        private void InfoTextbox_ContentsResized(object sender, ContentsResizedEventArgs e)
+        {
+            this.InfoTextbox.Height = e.NewRectangle.Height+5;
+        }
     }
 
 
