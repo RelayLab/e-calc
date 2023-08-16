@@ -109,7 +109,7 @@
             "Напряжение",
             "Ток",
             "Мощность"});
-            this.OperandUnitCombobox.Location = new System.Drawing.Point(185, 39);
+            this.OperandUnitCombobox.Location = new System.Drawing.Point(185, 43);
             this.OperandUnitCombobox.Margin = new System.Windows.Forms.Padding(2, 0, 5, 7);
             this.OperandUnitCombobox.Name = "OperandUnitCombobox";
             this.OperandUnitCombobox.Size = new System.Drawing.Size(106, 29);

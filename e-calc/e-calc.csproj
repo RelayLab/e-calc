@@ -57,8 +57,11 @@
     <Compile Include="src\Conversion\Conversion5.cs" />
     <Compile Include="src\Conversion\Conversion4.cs" />
     <Compile Include="src\Conversion\Conversion3.cs" />
+    <Compile Include="src\Formula\SortValuesByType.cs" />
+    <Compile Include="src\Formula\GetDefaultQuantities.cs" />
+    <Compile Include="src\Formula\UsesOperands.cs" />
     <Compile Include="src\PhysicalQuantityEnum.cs" />
-    <Compile Include="src\Formula.cs" />
+    <Compile Include="src\Formula\Formula.cs" />
     <Compile Include="src\Conversion\PerformConversion.cs" />
     <Compile Include="src\Conversion\Conversion2.cs" />
     <Compile Include="src\Conversion\Conversion1.cs" />

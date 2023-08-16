@@ -21,6 +21,8 @@ namespace e_calc
         private void ConversionCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.SuspendLayout();
+            this.MainWindowTable.SuspendLayout();
+            this.OperandsPanel.SuspendLayout();
 
             string ActiveConversion = (string)this.ConversionCombobox.SelectedItem;
 
@@ -59,7 +61,8 @@ namespace e_calc
 
             InfoTextbox.Text = MainModel.GetConversionInfo(ActiveConversion);
 
-
+            this.OperandsPanel.ResumeLayout();
+            this.MainWindowTable.ResumeLayout();
             this.ResumeLayout();
         }
 

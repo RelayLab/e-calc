@@ -31,6 +31,8 @@ namespace e_calc
             //стандартная строчка
             InitializeComponent();
 
+            this.SuspendLayout();
+
             MainModel = model;
 
             //Загружаем список всех конверторов в первый комбобокс на экране
@@ -39,6 +41,7 @@ namespace e_calc
             this.ConversionCombobox.SelectedIndex = 0;
             Helper.ResizeCombobox(ConversionCombobox);
 
+            this.ResumeLayout();
             //дальнейшая инициализация происходит через функцию обновления этого комбобокса ConversionCombobox_SelectedIndexChanged
         }
 

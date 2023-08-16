@@ -62,7 +62,7 @@ namespace e_calc
                     ResultInfo,
                     this.ConversionCombobox.Text);
 
-            if (Result == null) 
+            if (Result == null || Result == double.NaN.ToString() || Result == double.NegativeInfinity.ToString() || Result == double.PositiveInfinity.ToString())
             {
                 this.ResultValueTextbox.Text = "Ошибка!";
                 this.ResultValueTextbox.BackColor = Color.Tomato;
